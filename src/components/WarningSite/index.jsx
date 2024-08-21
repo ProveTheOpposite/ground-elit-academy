@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useRecoilValue } from "recoil";
 import translations from "src/language/translations";
 import { languageState } from "src/recoil";
@@ -26,6 +27,10 @@ const WarningSite = ({ setIsOpenWarningModal }) => {
       </div>
     </div>
   );
+};
+
+WarningSite.propTypes = {
+  setIsOpenWarningModal: PropTypes.func,
 };
 
 export default WarningSite;

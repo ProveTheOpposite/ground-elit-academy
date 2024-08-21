@@ -3,18 +3,18 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useRecoilValue } from "recoil";
 // firebase
-import { deleteUser, getAuth } from "firebase/auth";
-import { deleteDoc, doc } from "firebase/firestore";
+// import { deleteUser, getAuth } from "firebase/auth";
+// import { deleteDoc, doc } from "firebase/firestore";
 // firebase service
-import { db } from "src/service/firebase";
+// import { db } from "src/service/firebase";
 // react router dom
 import { Link } from "react-router-dom";
 // atoms
 import {
-  isRegisteredState,
-  isRegisteringState,
+//   isRegisteredState,
+//   isRegisteringState,
   languageState,
-  userIdState,
+//   userIdState,
 } from "src/recoil";
 // selectors
 import { scrollToElementSelector } from "src/recoil";
@@ -31,9 +31,9 @@ const Header = ({ openChangeLanguageModal }) => {
   const [showMenu, setShowMenu] = useState(false);
 
   const language = useRecoilValue(languageState);
-  const isRegistered = useRecoilValue(isRegisteredState);
-  const userId = useRecoilValue(userIdState);
-  const isRegistering = useRecoilValue(isRegisteringState);
+//   const isRegistered = useRecoilValue(isRegisteredState);
+//   const userId = useRecoilValue(userIdState);
+//   const isRegistering = useRecoilValue(isRegisteringState);
 
   const scrollToElement = useRecoilValue(scrollToElementSelector);
 

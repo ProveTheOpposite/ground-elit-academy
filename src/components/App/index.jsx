@@ -1,7 +1,7 @@
 import { lazy } from "react";
 // hook
-import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useState } from "react";
+// import { useLocation } from "react-router-dom";
 // import { useRecoilValue, useSetRecoilState } from "recoil";
 // firebase
 // import { getAuth, onAuthStateChanged } from "firebase/auth";
@@ -36,7 +36,7 @@ function App() {
 
   //   console.log("Current step vaut : ", currentStep);
 
-  const location = useLocation();
+  //   const location = useLocation();
 
   // Fonction pour ouvrir la modal de changement de langue
   const handleClickOpenChangeLanguageModal = () =>
@@ -78,7 +78,8 @@ function App() {
           <Route path="*" element={<ErrorElement />} />
         </Routes>
       </main>
-      {location.pathname === "/registration" && isRegistering ? "" : <Footer />}{" "}
+      {/* {location.pathname === "/registration" && isRegistering ? "" : <Footer />}{" "} */}
+      <Footer />
     </div>
   );
 }
