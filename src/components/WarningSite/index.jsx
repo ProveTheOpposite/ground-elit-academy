@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { useEffect } from "react";
 import { useRecoilValue } from "recoil";
 import translations from "src/language/translations";
 import { languageState } from "src/recoil";
@@ -6,8 +7,21 @@ import { languageState } from "src/recoil";
 const WarningSite = ({ setIsOpenWarningModal }) => {
   const language = useRecoilValue(languageState);
 
+  useEffect(() => {
+    // Bloque le scroll quand le modal est monté
+    document.body.classList.add("overflow-hidden");
+
+    // Nettoyage: Débloque le scroll quand le modal est démonté
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, []);
+
   return (
-    <div className="bg-modal-warning fixed right-0 top-0 z-50 flex h-screen w-full items-center justify-center px-3">
+    <div
+      onClick={() => setIsOpenWarningModal(false)}
+      className="bg-modal-warning fixed right-0 top-0 z-50 flex h-screen w-full items-center justify-center px-3"
+    >
       <div className="relative w-96 rounded-xl bg-white px-5 py-7 shadow-md">
         <i
           onClick={() => setIsOpenWarningModal(false)}
