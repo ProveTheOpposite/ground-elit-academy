@@ -1,9 +1,12 @@
 // prop types
 import PropTypes from "prop-types";
 
-const Modal = ({ children }) => {
+const Modal = ({ children, className, onClick }) => {
   return (
-    <div className="bg-modal fixed left-0 top-0 z-50 flex h-screen w-full items-center justify-center">
+    <div
+      onClick={onClick}
+      className={`${className ? className : ""} fixed left-0 top-0 z-50 flex h-screen w-full items-center justify-center`}
+    >
       {children}
     </div>
   );
@@ -12,6 +15,8 @@ const Modal = ({ children }) => {
 // Props validation
 Modal.propTypes = {
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default Modal;

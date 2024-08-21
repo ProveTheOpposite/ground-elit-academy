@@ -21,6 +21,8 @@ const Footer = () => {
           <span className="text-sm md:text-base">
             &copy; 2024 Ground Elit Academy - GEA Nice
           </span>
+
+          <span className="specially text-sm md:text-base">1.0.2</span>
         </div>
 
         {/* links */}
@@ -30,7 +32,7 @@ const Footer = () => {
           </h4>
 
           <span className="mb-2 text-sm md:text-base">
-            <i className="fa-solid fa-hashtag mr-3"></i>
+            <i className="fa-brands fa-instagram mr-3"></i>
             <a href="#" className="hover:underline">
               {/* <i className="fa-brands fa-instagram t cursor-pointer transition-all hover:scale-110 hover:text-red-500"></i> */}
               Instagram
