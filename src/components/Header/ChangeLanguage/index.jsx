@@ -1,4 +1,5 @@
 // hook
+import { useEffect } from "react";
 import { useRecoilState } from "recoil";
 // atom
 import { languageState } from "src/recoil";
@@ -17,8 +18,21 @@ const ChangeLanguage = ({ closeModal }) => {
     closeModal(false);
   };
 
+  useEffect(() => {
+    // Bloque le scroll quand le modal est monté
+    document.body.classList.add("overflow-hidden");
+
+    // Nettoyage: Débloque le scroll quand le modal est démonté
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, []);
+
   return (
-    <div className="relative z-50 rounded-lg bg-white px-16 py-12 shadow-2xl">
+    <div
+      onClick={(e) => e.stopPropagation()}
+      className="relative z-50 rounded-lg bg-white px-16 py-12 shadow-2xl"
+    >
       <i
         onClick={() => closeModal(false)}
         className="fa-solid fa-xmark absolute right-4 top-3 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full text-xl transition-colors hover:bg-red-50 hover:text-red-600"
@@ -60,7 +74,7 @@ const ChangeLanguage = ({ closeModal }) => {
               </svg>
             ) : (
               <img
-                className="mr-2 w-7"
+                className="mr-2 h-4 w-6"
                 src={imageUrl.header.englandFlag}
                 alt="British flag"
               />

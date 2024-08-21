@@ -7,12 +7,14 @@
     /* font-family: "Caudex", serif; */
     background-color: #eee;
     font-family: "Ubuntu", sans-serif;
+    /* pour le scrollbar sur Firefox */
+    scrollbar-width: 9px;
+    scrollbar-color: red;
   }
 
   .specially {
     font-family: "Tinos", serif;
   }
-
   /* Pour le composant Modal */
   .bg-modal {
     background-color: rgba(77, 61, 61, 0.5);
@@ -23,6 +25,7 @@
     background-color: rgba(10, 9, 9, 0.5);
   }
 
+  /* Enlevé le scroll lorsqu'une popup s'ouvre */
   .overflow-hidden {
     overflow: hidden;
   }
@@ -69,5 +72,24 @@
 
   .registration-content-flex-grow {
     flex-grow: 1.5;
+  }
+
+  /* scroll bar sur Chrome et Safari */
+  ::-webkit-scrollbar {
+    width: 9px;
+    background-color: #111;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #444;
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background-color: rgb(58, 61, 58);
   }
 }

@@ -24,7 +24,7 @@ function App() {
   // State pour savoir si la modal de changement de langue est ouverte
   const [isChangeLanguageModalOpen, setChangeLanguageModalOpen] =
     useState(false);
-  const [isOpenWarningModal, setIsOpenWarningModal] = useState(true);
+  const [isWarningModalOpen, setIsWarningModalOpen] = useState(true);
   // setter permettant de le définir à true pour pouvoir changer l'UI en conséquence
   //   const setIsRegistered = useSetRecoilState(isRegisteredState);
   // setter qui sera réutilisé pour pouvoir faire une requete sur ce user en question
@@ -62,12 +62,20 @@ function App() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      {isOpenWarningModal && (
-        <WarningSite setIsOpenWarningModal={setIsOpenWarningModal} />
+      {isWarningModalOpen && (
+        <Modal
+          onClick={() => setIsWarningModalOpen(false)}
+          className="bg-modal-warning"
+        >
+          <WarningSite setIsWarningModalOpen={setIsWarningModalOpen} />
+        </Modal>
       )}
       <Header openChangeLanguageModal={handleClickOpenChangeLanguageModal} />
       {isChangeLanguageModalOpen && (
-        <Modal>
+        <Modal
+          onClick={() => setChangeLanguageModalOpen(false)}
+          className="bg-modal"
+        >
           <ChangeLanguage closeModal={setChangeLanguageModalOpen} />
         </Modal>
       )}
