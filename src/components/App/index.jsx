@@ -1,4 +1,4 @@
-import { lazy } from "react";
+// import { lazy } from "react";
 // hook
 import { useState } from "react";
 // import { useLocation } from "react-router-dom";
@@ -18,7 +18,7 @@ import ChangeLanguage from "../Header/ChangeLanguage";
 import Modal from "../Modal";
 // import ProtectedRoute from "../ProtectedRoute";
 import WarningSite from "../WarningSite";
-const Registration = lazy(() => import("src/pages/Registration"));
+// const Registration = lazy(() => import("src/pages/Registration"));
 
 function App() {
   // State pour savoir si la modal de changement de langue est ouverte
@@ -74,7 +74,7 @@ function App() {
       <main className="flex flex-1 flex-col">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/registration" element={<Registration />} />
+          {/* <Route path="/registration" element={<Registration />} /> */}
           <Route path="*" element={<ErrorElement />} />
         </Routes>
       </main>
