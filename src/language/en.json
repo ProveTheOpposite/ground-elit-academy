@@ -1,0 +1,161 @@
+{
+  "header": {
+    "headerList": {
+      "welcome": "Welcome",
+      "aboutUs": "About us",
+      "team": "Team",
+      "schedule": "Schedule",
+      "rates": "Rates"
+    },
+    "btnTranslation": {
+      "fr": "French",
+      "en": "English"
+    },
+    "registration": "Join us",
+    "cancel": "Cancel"
+  },
+
+  "warning": {
+    "firstContent": "The site you are visiting is not yet fully completed. It may contain errors, but these will be fixed before September 9, 2024 (Club opening date).",
+    "secondContent": "If you have any questions, please contact us at the number provided at the bottom of the page."
+  },
+
+  "home": {
+    "banner": {
+      "btnRegistration": "Join us"
+    },
+
+    "aboutUs": {
+      "title": "About us"
+    },
+
+    "team": {
+      "title": "Our team",
+      "subTitle": "In our club, we have two exceptional coaches who will help you progress to a level you never imagined possible."
+    },
+
+    "schedule": {
+      "title": "Our Hours",
+      "subTitle": "Wrestling and grappling classes alternate each week.",
+      "daysOfWeek": {
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday",
+        "thursday": "Thursday",
+        "friday": "Friday",
+        "saturday": "Saturday",
+        "sunday": "Sunday"
+      },
+      "scheduleItem": {
+        "time": {
+          "wrestling": "6:00 PM - 7:30 PM",
+          "grappling": "7:30 PM - 9:00 PM"
+        },
+        "event": {
+          "childrenTraining": "Children training",
+          "adultsTraining": "Adult training"
+        }
+      }
+    },
+
+    "rates": {
+      "title": "Rates",
+      "subTitle": "Monthly subscription",
+      "adults": "Adults (14 years and older)",
+      "kids": "Children (7 years and older)",
+      "content": "Payments are made in cash directly at the club. The amount must be paid between the 1st and the 9th day of the current month."
+    },
+
+    "registrationHome": {
+      "title": "Join us now!",
+      "email": "Email",
+      "password": "Password",
+      "errorsMessage": {
+        "required": "Please fill out this field",
+        "invalidEmail": "Invalid email",
+        "minPassword": "6 characters minimum",
+        "maxPassword": "Too long"
+      },
+      "btnSubmit": "Submit",
+      "moreInformation": "You will be redirected to another page to continue your registration. If you are a minor, please ask an adult for permission to sign up."
+    }
+  },
+
+  "registration": {
+    "stepBar": {
+      "seeStepsBtn": "View the steps",
+      "closeStepsBtn": "Close",
+      "step1": {
+        "title": "Step 1",
+        "description": "Email and password"
+      },
+      "step2": {
+        "title": "Step 2",
+        "description": "Personal informations"
+      },
+      "step3": {
+        "title": "Step 3",
+        "description": "Subscription choice"
+      },
+      "step4": {
+        "title": "Step 4",
+        "description": "Payment"
+      }
+    },
+    "personalInformations": {
+      "title": "Personal Informations",
+      "name": "Name",
+      "firstName": "First Name",
+      "age": "Age",
+      "phoneNumber": "Phone number",
+      "birthDay": "Date of birth",
+      "contactEmergency": "Emergency contact phone number",
+      "errorsMessage": {
+        "required": "Please fill out this field",
+        "ageTypeError": "The age must be a number",
+        "phoneNumberLength": "The phone number must contain 10 digits",
+        "birthDayMin": "The date must be after January 1, 1954",
+        "birthDayTypeError": "The date of birth must be a valid date",
+        "contactEmergencyLength": "The phone number must contain 10 digits"
+      },
+      "btnBack": "Back",
+      "btnSubmit": "Submit"
+    },
+    "chooseSubscription": {
+      "title": "Choose your subscription",
+      "subTitle": "Monthly subscription",
+      "perMonth": "per month",
+      "adults": "Adults (14 years and older)",
+      "kids": "Children (7 years and older)",
+      "btnChoose": "Select"
+    },
+    "summary": {
+      "subTitle": "Registration summary",
+      "name": "Name",
+      "firstName": "First Name",
+      "age": "Age",
+      "phoneNumber": "Phone number",
+      "birthDay": "Date of birth",
+      "contactEmergency": "Emergency contact number",
+      "email": "Email",
+      "btnUpdate": "Edit information"
+    },
+    "checkout": {
+      "title": "Complete your registration",
+      "subTitle": "Payment method",
+      "btnBuy": "Buy",
+      "byStripe": "Powered by Stripe"
+    }
+  },
+
+  "footer": {
+    "privacyAndPolicy": "Privacy & Policy",
+    "termsAndConditions": "Terms and Conditions"
+  },
+
+  "errorElement": {
+    "title": "Error 404",
+    "content": "The page you are trying to find could not be found.",
+    "btnWelcome": "Return to the homepage"
+  }
+}

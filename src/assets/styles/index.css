@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    /* font-family: "Caudex", serif; */
+    background-color: #eee;
+    font-family: "Ubuntu", sans-serif;
+  }
+
+  .specially {
+    font-family: "Tinos", serif;
+  }
+
+  /* Pour le composant Modal */
+  .bg-modal {
+    background-color: rgba(77, 61, 61, 0.5);
+  }
+
+  /* temporaire le temps que tout le site soit terminé */
+  .bg-modal-warning {
+    background-color: rgba(10, 9, 9, 0.5);
+  }
+
+  /* Pour le composant ChangeLanguage */
+  .box-shadow-change-language {
+    box-shadow:
+      rgba(224, 143, 143, 0.1) 0px 1px 1px 0px inset,
+      rgba(143, 94, 94, 0.25) 0px 50px 100px -20px,
+      rgba(240, 50, 50, 0.3) 0px 30px 60px -30px;
+  }
+
+  /* Pour le bouton inscription dans le header */
+  .btn-registration-header {
+    background: rgb(13, 6, 6);
+    background: linear-gradient(
+      200deg,
+      rgba(195, 39, 39, 1) 0%,
+      rgba(13, 6, 6, 1) 54%
+    );
+  }
+
+  /* Pour le background du banner */
+  .bg-banner-url {
+    background: url("../images/home/bg-banner.jpg") no-repeat center
+      center/cover;
+  }
+
+  /* Pour le titre du composant Error Element */
+  .error-elem-text-fill {
+    background: linear-gradient(
+      200deg,
+      rgb(244, 21, 21) 0%,
+      rgb(60, 40, 40) 63%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Pour le composant Registration, faire un flex différent pour les étapes et le composant active */
+  .step-div-flex-grow {
+    flex-grow: 0.5;
+  }
+
+  .registration-content-flex-grow {
+    flex-grow: 1.5;
+  }
+}
