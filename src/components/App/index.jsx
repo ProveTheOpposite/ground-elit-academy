@@ -32,7 +32,9 @@ function App() {
           <WarningSite setIsWarningModalOpen={setIsWarningModalOpen} />
         </Modal>
       )}
+
       <Header openChangeLanguageModal={handleClickOpenChangeLanguageModal} />
+
       {isChangeLanguageModalOpen && (
         <Modal
           onClick={() => setChangeLanguageModalOpen(false)}
@@ -41,12 +43,14 @@ function App() {
           <ChangeLanguage closeModal={setChangeLanguageModalOpen} />
         </Modal>
       )}
+
       <main className="flex flex-1 flex-col">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="*" element={<ErrorElement />} />
         </Routes>
       </main>
+
       <Footer />
     </div>
   );
