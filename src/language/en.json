@@ -63,7 +63,8 @@
       "subTitle": "Monthly subscription",
       "adults": "Adults (14 years and older)",
       "kids": "Children (7 years and older)",
-      "content": "Payments are made in cash directly at the club. The amount must be paid between the 1st and the 9th day of the current month."
+      "firstContent": "Payments are made in cash directly at the club. The amount must be paid between the 1st and the 9th day of the current month.",
+      "secondContent": "A free trial class is available for both disciplines."
     },
 
     "registrationHome": {

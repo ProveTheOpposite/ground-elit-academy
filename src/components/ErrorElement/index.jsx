@@ -178,7 +178,7 @@ const ErrorElement = () => {
           )}
         </h1>
 
-        <p className="text-center text-xs md:text-sm lg:text-base">
+        <p className="text-center text-xs  md:text-sm lg:text-base">
           {translations[language].errorElement.content}
         </p>
 

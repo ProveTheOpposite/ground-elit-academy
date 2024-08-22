@@ -16,8 +16,11 @@ const Rates = () => {
 
       <div className="flex items-center justify-center">
         <div className="grid w-[420px] grid-cols-1 grid-rows-3 rounded-xl bg-white px-5 py-6 shadow-md">
-          <h3 className="col-span-full mb-7 text-center text-lg underline">
-            {translations[language].home.rates.subTitle}
+          <h3 className="col-span-full mb-7 text-center text-lg">
+            <span className="underline">
+              {translations[language].home.rates.subTitle}
+            </span>
+            <span className="text-lg text-red-600">*</span>
           </h3>
 
           <div className="flex items-center justify-between text-sm md:text-base">
@@ -32,9 +35,14 @@ const Rates = () => {
             <h3 className="text-right text-2xl font-bold">40,00€</h3>
           </div>
 
-          <span className="mt-5 text-justify text-sm leading-normal md:text-base">
-            {translations[language].home.rates.content}
-          </span>
+          <p className="mt-5 text-justify text-sm leading-normal md:text-base">
+            {translations[language].home.rates.firstContent}
+          </p>
+
+          <p className="mt-5 text-justify text-sm leading-normal md:text-base">
+            <span className="mr-1 text-red-600">*</span>
+            {translations[language].home.rates.secondContent}
+          </p>
         </div>
       </div>
     </section>

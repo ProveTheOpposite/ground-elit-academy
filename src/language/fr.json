@@ -58,7 +58,8 @@
       "subTitle": "Abonnement mensuel",
       "adults": "Adultes (14 ans et +)",
       "kids": "Enfant (7 ans et +)",
-      "content": "Les paiements se font en espèces directement au club. Le montant doit être payant entre le 1er et le 9ème jour du mois courant."
+      "firstContent": "Les paiements se font en espèces directement au club. Le montant doit être payant entre le 1er et le 9ème jour du mois courant.",
+      "secondContent": "Un cours d'essai gratuit est disponible pour les deux disciplines."
     },
 
     "registrationHome": {
