@@ -1,19 +1,15 @@
 // hook
 import { useRecoilValue } from "recoil";
 // atom
-import { isRegisteredState, languageState } from "src/recoil";
+import { languageState } from "src/recoil";
 // assets
 import translations from "src/language/translations";
 
 const Rates = () => {
   const language = useRecoilValue(languageState);
-  const isRegistered = useRecoilValue(isRegisteredState);
 
   return (
-    <section
-      id="rates"
-      className={`border-t border-zinc-400 ${isRegistered ? "pb-10" : "pb-16"} p-5`}
-    >
+    <section id="rates" className={`border-t border-zinc-400 p-5 pb-16`}>
       <h2 className="mb-5 text-center text-2xl font-bold lg:text-3xl">
         {translations[language].home.rates.title}
       </h2>

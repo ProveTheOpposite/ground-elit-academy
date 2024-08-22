@@ -1,15 +1,7 @@
-// hook
-// import { useRecoilValue } from "recoil";
 // react  router dom
 import { Link } from "react-router-dom";
-// atom
-// import { languageState } from "src/recoil";
-// assets
-// import translations from "src/language/translations";
 
 const Footer = () => {
-  //   const language = useRecoilValue(languageState);
-
   return (
     <footer className="flex bg-gray-800 px-5 py-8 text-slate-300 lg:justify-center xl:py-16">
       <div className="flex w-full flex-col md:flex-row md:items-center md:justify-between lg:w-[82%] xl:w-[75%] 2xl:w-[1200px]">
@@ -22,7 +14,7 @@ const Footer = () => {
             &copy; 2024 Ground Elit Academy - GEA Nice
           </span>
 
-          <span className="specially text-sm md:text-base">1.0.2</span>
+          <span className="specially text-sm md:text-base">1.0.0</span>
         </div>
 
         {/* links */}
@@ -34,18 +26,16 @@ const Footer = () => {
           <span className="mb-2 text-sm md:text-base">
             <i className="fa-brands fa-instagram mr-3"></i>
             <a href="#" className="hover:underline">
-              {/* <i className="fa-brands fa-instagram t cursor-pointer transition-all hover:scale-110 hover:text-red-500"></i> */}
               Instagram
             </a>
           </span>
 
-          <a
-            href="tel:0606060606"
-            className="mb-2 cursor-pointer text-sm hover:underline md:text-base"
-          >
+          <span className="mb-2 text-sm md:text-base">
             <i className="fa-solid fa-phone mr-3"></i>
-            06 21 78 62 74
-          </a>
+            <a href="tel:0606060606" className="cursor-pointer hover:underline">
+              06 21 78 62 74
+            </a>
+          </span>
 
           <span className="cursor-pointer text-sm hover:underline md:text-base">
             <i className="fa-solid fa-location-dot mr-3"></i>
@@ -53,15 +43,6 @@ const Footer = () => {
           </span>
         </div>
       </div>
-
-      {/* <div className="flex flex-col pt-4 text-base md:justify-center md:border-t-0 md:pl-4 md:pt-0 xl:flex-row xl:justify-evenly xl:border-t xl:px-3 xl:pt-3">
-          <span className="mb-5 cursor-pointer hover:underline xl:mb-0">
-            {translations[language].footer.privacyAndPolicy}
-          </span>
-          <span className="cursor-pointer hover:underline">
-            {translations[language].footer.termsAndConditions}
-          </span>
-        </div> */}
     </footer>
   );
 };

@@ -1,19 +1,10 @@
 // hook
 import { useRecoilValue } from "recoil";
-// react router dom
-// import { Link } from "react-router-dom";
 // atom
-import {
-  //   isRegisteredState,
-  languageState,
-} from "src/recoil";
-// assets
-// import translations from "src/language/translations";
+import { languageState } from "src/recoil";
 
 const Banner = () => {
   const language = useRecoilValue(languageState);
-  //   const isRegistered = useRecoilValue(isRegisteredState);
-  //   const scrollToElement = useRecoilValue(scrollToElementSelector);
 
   return (
     <section
@@ -38,15 +29,6 @@ const Banner = () => {
             </>
           )}
         </h1>
-
-        {/* {!isRegistered && (
-          <Link
-            onClick={() => scrollToElement("registration")}
-            className={`rounded-xl ${language === "en" ? "px-5" : "px-6"} bg-red-600 py-3 text-sm text-white transition-colors duration-200 hover:bg-black lg:text-base`}
-          >
-            {translations[language].home.banner.btnRegistration}
-          </Link>
-        )} */}
       </div>
     </section>
   );
