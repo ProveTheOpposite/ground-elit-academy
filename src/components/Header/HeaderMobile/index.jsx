@@ -112,16 +112,6 @@ const HeaderMobile = ({ setShowMenu, showMenu }) => {
             ))}
           </div>
         )}
-
-        {/* <a
-          onClick={() => {
-            scrollToElement("registration");
-            setShowMenu(false);
-          }}
-          className="hover:btn-registration-header rounded-xl border border-red-600 px-5 py-1 text-red-600 transition-colors hover:text-white"
-        >
-          {translations[language].header.registration}
-        </a> */}
       </div>
 
       <i

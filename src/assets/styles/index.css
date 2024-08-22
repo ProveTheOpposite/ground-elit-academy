@@ -4,7 +4,6 @@
 
 @layer base {
   body {
-    /* font-family: "Caudex", serif; */
     background-color: #eee;
     font-family: "Ubuntu", sans-serif;
     /* pour le scrollbar sur Firefox */
@@ -15,7 +14,7 @@
   .specially {
     font-family: "Tinos", serif;
   }
-  /* Pour le composant Modal */
+  /* Pour le composant Modal du change language */
   .bg-modal {
     background-color: rgba(77, 61, 61, 0.5);
   }
@@ -38,16 +37,6 @@
       rgba(240, 50, 50, 0.3) 0px 30px 60px -30px;
   }
 
-  /* Pour le bouton inscription dans le header */
-  .btn-registration-header {
-    background: rgb(13, 6, 6);
-    background: linear-gradient(
-      200deg,
-      rgba(195, 39, 39, 1) 0%,
-      rgba(13, 6, 6, 1) 54%
-    );
-  }
-
   /* Pour le background du banner */
   .bg-banner-url {
     background: url("../images/home/bg-banner.jpg") no-repeat center
@@ -63,15 +52,6 @@
     );
     background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
-
-  /* Pour le composant Registration, faire un flex différent pour les étapes et le composant active */
-  .step-div-flex-grow {
-    flex-grow: 0.5;
-  }
-
-  .registration-content-flex-grow {
-    flex-grow: 1.5;
   }
 
   /* scroll bar sur Chrome et Safari */

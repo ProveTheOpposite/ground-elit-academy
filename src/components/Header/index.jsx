@@ -2,20 +2,10 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useRecoilValue } from "recoil";
-// firebase
-// import { deleteUser, getAuth } from "firebase/auth";
-// import { deleteDoc, doc } from "firebase/firestore";
-// firebase service
-// import { db } from "src/service/firebase";
 // react router dom
 import { Link } from "react-router-dom";
 // atoms
-import {
-//   isRegisteredState,
-//   isRegisteringState,
-  languageState,
-//   userIdState,
-} from "src/recoil";
+import { languageState } from "src/recoil";
 // selectors
 import { scrollToElementSelector } from "src/recoil";
 // components
@@ -31,17 +21,10 @@ const Header = ({ openChangeLanguageModal }) => {
   const [showMenu, setShowMenu] = useState(false);
 
   const language = useRecoilValue(languageState);
-//   const isRegistered = useRecoilValue(isRegisteredState);
-//   const userId = useRecoilValue(userIdState);
-//   const isRegistering = useRecoilValue(isRegisteringState);
 
   const scrollToElement = useRecoilValue(scrollToElementSelector);
 
   const location = useLocation();
-
-  //   temporaire
-  //   const auth = getAuth();
-  //   const userCurrent = auth.currentUser;
 
   // Effet pour changer le style du header lorsqu'on commence à scroller
   useEffect(() => {
@@ -58,17 +41,6 @@ const Header = ({ openChangeLanguageModal }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  //   temporaire mais plus tard ca sera deleteUser
-  //   const deleteCurrentUser = async () => {
-  //     try {
-  //       await deleteUser(userCurrent);
-  //       await deleteDoc(doc(db, "users", userId));
-  //       console.log("user delete");
-  //     } catch (e) {
-  //       console.error("Erreur lors de la suppression du user : ", e);
-  //     }
-  //   };
 
   const handleClick = () => {
     setShowMenu(true);
@@ -161,24 +133,6 @@ const Header = ({ openChangeLanguageModal }) => {
             />
           )}
         </button>
-
-        {/* {isRegistering ? (
-          ""
-        ) : isRegistered ? (
-          <span
-            onClick={deleteCurrentUser}
-            className="hover:btn-registration-header ml-10 cursor-pointer rounded-xl border border-red-600 px-6 py-2 text-red-600 transition-colors hover:text-white"
-          >
-            {translations[language].header.cancel}
-          </span>
-        ) : (
-          <a
-            onClick={() => scrollToElement("registration")}
-            className="hover:btn-registration-header ml-10 cursor-pointer rounded-xl border border-red-600 px-6 py-2 text-red-600 transition-colors hover:text-white"
-          >
-            {translations[language].header.registration}
-          </a>
-        )} */}
       </div>
 
       <i
@@ -186,9 +140,7 @@ const Header = ({ openChangeLanguageModal }) => {
         className={`fa-solid fa-bars ${scroll || location.pathname === "/registration" || (location.pathname !== "/" && "/registration") ? "text-black" : "text-white"} text-2xl xl:hidden`}
       ></i>
 
-      {/* {showMenu && ( */}
       <HeaderMobile showMenu={showMenu} setShowMenu={setShowMenu} />
-      {/* )} */}
     </header>
   );
 };
