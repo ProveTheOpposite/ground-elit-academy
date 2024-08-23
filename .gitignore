@@ -11,16 +11,6 @@ node_modules
 dist
 dist-ssr
 *.local
-.env
-
-# temporaire, le temps que le site soit fini
-.firebaserc
-firebase.json
-task.todo
-src/service
-src/stripe
-functions
-
 
 # Editor directories and files
 .vscode/*
