@@ -32,7 +32,7 @@ const Footer = () => {
 
           <span className="mb-2 text-sm md:text-base">
             <i className="fa-solid fa-phone mr-3"></i>
-            <a href="tel:0606060606" className="cursor-pointer hover:underline">
+            <a href="tel:0621786274" className="cursor-pointer hover:underline">
               06 21 78 62 74
             </a>
           </span>
