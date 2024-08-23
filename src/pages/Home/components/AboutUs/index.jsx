@@ -30,7 +30,7 @@ const AboutUs = () => {
                 <u>le respect</u> sont au cœur de notre philosophie. Les enfants
                 sont également les bienvenus chez nous, où ils peuvent non
                 seulement développer leurs compétences physiques, mais aussi
-                apprendre des valeurs essentielles comme le respect, la
+                apprendre les valeurs essentielles comme le respect, la
                 discipline, et l&apos;entraide. Que vous cherchiez à améliorer
                 votre forme physique, à apprendre un nouvel art martial, ou à
                 vous préparer pour la compétition, vous trouverez chez nous un
