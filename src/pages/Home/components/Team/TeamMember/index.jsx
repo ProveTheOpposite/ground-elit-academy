@@ -6,14 +6,14 @@ const TeamMember = ({ name, description, imgUrl, reverse }) => {
     <article
       className={`flex flex-col items-center border-t border-slate-500 p-3 md:py-7 lg:flex-row lg:items-center lg:gap-x-5 ${reverse ? "lg:flex-row-reverse" : ""}`}
     >
-      <div className="flex items-center justify-center overflow-hidden md:w-[56%] lg:flex-1">
+      <div className="md:w-[56%] lg:flex-1">
         <a
-          className="flex items-center justify-center"
-          target="_blank"
           href={imgUrl}
+          className="block overflow-hidden rounded-md border border-black min-[500px]:mx-auto min-[500px]:w-[73%] lg:w-[80%] xl:w-[65%] 2xl:w-[60%]"
+          target="_blank"
         >
           <img
-            className="rounded-md border border-black transition-transform duration-200 hover:scale-105 min-[500px]:w-[73%] lg:w-[80%] xl:w-[65%] 2xl:w-[60%]"
+            className="w-full transition-transform duration-200 hover:scale-105"
             src={imgUrl}
             alt={`Photo de ${name}`}
             loading="lazy"

@@ -17,7 +17,7 @@ const Team = () => {
         {translations[language].home.team.title}
       </h2>
 
-      <div className="container mx-auto grid grid-cols-1 grid-rows-[auto_1.1fr_0.9fr] rounded-xl bg-white py-3 shadow-md">
+      <div className="container mx-auto grid grid-cols-1 grid-rows-[auto_1.1fr_0.9fr] rounded-xl bg-white pt-3 shadow-md">
         <p className="col-span-full col-start-1 px-3 pb-2 text-center text-sm leading-normal md:px-4 md:pb-3 md:text-base xl:pb-6 xl:pt-3">
           {translations[language].home.team.subTitle}
         </p>
