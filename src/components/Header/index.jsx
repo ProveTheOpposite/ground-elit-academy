@@ -89,6 +89,12 @@ const Header = ({ openChangeLanguageModal }) => {
               ? "hover:bg-red-100"
               : "hover:bg-slate-500"
           }`}
+          type="button"
+          aria-label={
+            language === "fr"
+              ? "Changer la langue, actuellement en français"
+              : "Change the language, currently in English"
+          }
         >
           <svg
             className="w-7"

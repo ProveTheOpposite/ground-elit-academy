@@ -27,7 +27,7 @@ const Footer = () => {
 
         {/* links */}
         <div className="mb-10 flex flex-col gap-y-2 sm:mb-0 sm:flex-wrap sm:content-center xl:content-end xl:gap-x-8 xl:pr-5">
-          <h4 className="mb-2 text-lg font-bold uppercase xl:mb-4">Contact</h4>
+          <h3 className="mb-2 text-lg font-bold uppercase xl:mb-4">Contact</h3>
 
           <span className="mb-2 text-sm md:text-base">
             <i className="fa-brands fa-instagram mr-3"></i>
