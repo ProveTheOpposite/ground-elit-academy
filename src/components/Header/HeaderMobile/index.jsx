@@ -116,7 +116,7 @@ const HeaderMobile = ({ setShowMenu, showMenu }) => {
 
       <i
         onClick={() => setShowMenu(false)}
-        className="fa-solid fa-xmark absolute right-5 top-3 flex w-[48px] items-center justify-center rounded-full py-1 text-4xl transition-colors hover:bg-slate-100"
+        className="fa-solid fa-xmark absolute right-3 top-3 flex w-[48px] items-center justify-center rounded-full py-1 text-3xl transition-colors hover:bg-slate-100"
       ></i>
     </nav>
   );

@@ -60,93 +60,16 @@
       "kids": "Enfant (7 ans et +)",
       "firstContent": "Les paiements se font en espèces directement au club. Le montant doit être payant entre le 1er et le 9ème jour du mois courant.",
       "secondContent": "Un cours d'essai gratuit est disponible pour les deux disciplines."
-    },
-
-    "registrationHome": {
-      "title": "Inscrivez-vous dès maintenant !",
-      "email": "Email",
-      "password": "Mot de passe",
-      "errorsMessage": {
-        "required": "Veuillez remplir ce champ",
-        "invalidEmail": "Email invalide",
-        "minPassword": "6 caractères minimum",
-        "maxPassword": "Trop long"
-      },
-      "btnSubmit": "Soumettre",
-      "moreInformation": "Vous serez redirigé vers une autre page pour continuer l'inscription. Si vous êtes mineur, demandez l'accord à un adulte pour vous inscrire."
-    }
-  },
-
-  "registration": {
-    "stepBar": {
-      "seeStepsBtn": "Voir les étapes",
-      "closeStepsBtn": "Fermer",
-      "step1": {
-        "title": "Étape 1",
-        "description": "Email et mot de passe"
-      },
-      "step2": {
-        "title": "Étape 2",
-        "description": "Informations personnelles"
-      },
-      "step3": {
-        "title": "Étape 3",
-        "description": "Choix de l'abonnement"
-      },
-      "step4": {
-        "title": "Étape 4",
-        "description": "Paiement"
-      }
-    },
-    "personalInformations": {
-      "title": "Informations personnelles",
-      "name": "Nom",
-      "firstName": "Prénom",
-      "age": "Âge",
-      "phoneNumber": "Numéro de téléphone",
-      "birthDay": "Date de naissance",
-      "contactEmergency": "Numéro de téléphone en cas d'urgence",
-      "errorsMessage": {
-        "required": "Veuillez remplir ce champ",
-        "ageTypeError": "L'âge doit être un nombre",
-        "phoneNumberLength": "Le numéro de téléphone doit contenir 10 chiffres",
-        "birthDayMin": "La date doit être après le 1er janvier 1954",
-        "birthDayTypeError": "La date de naissance doit être une date valide",
-        "contactEmergencyLength": "Le numéro de téléphone doit contenir 10 chiffres"
-      },
-      "btnBack": "Retour",
-      "btnSubmit": "Soumettre"
-    },
-    "chooseSubscription": {
-      "title": "Choisissez votre abonnement",
-      "subTitle": "Abonnement mensuel",
-      "perMonth": "par mois",
-      "adults": "Adultes (14 ans et +)",
-      "kids": "Enfant (7 ans et +)",
-      "btnChoose": "Choisir"
-    },
-    "summary": {
-      "subTitle": "Résumé de votre inscription",
-      "name": "Nom",
-      "firstName": "Prénom",
-      "age": "Âge",
-      "phoneNumber": "Numéro de téléphone",
-      "birthDay": "Date de naissance",
-      "contactEmergency": "Numéro du contact en cas d'urgence",
-      "email": "Email",
-      "btnUpdate": "Modifier les informations"
-    },
-    "checkout": {
-      "title": "Finaliser votre inscription",
-      "subTitle": "Moyen de paiement",
-      "btnBuy": "Payer",
-      "byStripe": "Propulsé par Stripe"
     }
   },
 
   "footer": {
     "privacyAndPolicy": "Politique de Confidentialité",
     "termsAndConditions": "Termes et Conditions"
+  },
+
+  "termsAndConditions": {
+    "title": "Termes et Conditions"
   },
 
   "errorElement": {

@@ -48,7 +48,7 @@ const Header = ({ openChangeLanguageModal }) => {
 
   return (
     <header
-      className={`${scroll || location.pathname !== "/" ? "bg-white shadow-xl" : ""} fixed left-0 top-0 z-40 flex w-full items-center justify-between bg-transparent px-5 py-4 lg:py-5 xl:h-[78px] xl:justify-between xl:px-12 2xl:px-44`}
+      className={`${scroll || location.pathname !== "/" ? "bg-white shadow-lg" : ""} fixed left-0 top-0 z-40 flex w-full items-center justify-between bg-transparent px-5 py-4 lg:py-5 xl:h-[78px] xl:justify-between xl:px-12 2xl:px-44`}
     >
       <h2
         className={`${
