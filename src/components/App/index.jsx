@@ -3,7 +3,6 @@ import { useState } from "react";
 // react router dom
 import { Route, Routes } from "react-router-dom";
 // components
-import { ScrollRestoration } from "react-router-dom";
 import Home from "src/pages/Home";
 import TermsAndConditions from "src/pages/TermsAndConditions";
 import ErrorElement from "../ErrorElement";
