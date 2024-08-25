@@ -22,8 +22,16 @@ const TeamMember = ({ name, description, imgUrl, reverse }) => {
       </div>
 
       <div className="mt-4 text-center lg:flex-1 lg:px-5">
-        <h3 className="mb-4 text-xl font-bold lg:text-2xl">{name}</h3>
-        <p className="text-sm md:text-base">{description}</p>
+        {/* mobile */}
+        <h3 className="mb-4 text-xl font-bold md:hidden lg:text-2xl">{name}</h3>
+        <p className="px-2 text-justify text-sm md:hidden">{description}</p>
+        {/* tablet and more */}
+        <div className="hidden md:mx-auto md:block md:w-[85%]">
+          <h3 className="md:mb-4 md:text-xl md:font-bold lg:text-2xl">
+            {name}
+          </h3>
+          <p className="md:text-base">{description}</p>
+        </div>
       </div>
     </article>
   );

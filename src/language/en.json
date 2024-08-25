@@ -31,7 +31,13 @@
 
     "team": {
       "title": "Our team",
-      "subTitle": "In our club, we have two exceptional coaches who will help you progress to a level you never imagined possible."
+      "subTitle": "In our club, we have two exceptional coaches who will help you progress to a level you never imagined possible.",
+      "nazim": {
+        "text": "Nazim Djamalov, a multiple-time French champion and former member of the national team, is a coach whose experience and talent are recognized beyond borders. With his creativity and teaching skills, he will guide you step by step to perfect your technique and develop your potential. Whether you are a beginner or a competitor, Nazim will tailor his instruction to your needs, helping you progress quickly."
+      },
+      "gaetan": {
+        "text": "Gaetan Houara, a multiple-time French Open champion, is an expert in grappling and wrestling, known for his technical mastery and strategic insight. His dynamic and motivating approach will push you to give your best in every training session. With his support, you'll improve your skills and reach new heights in your practice."
+      }
     },
 
     "schedule": {

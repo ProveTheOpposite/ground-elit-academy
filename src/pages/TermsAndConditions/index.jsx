@@ -127,13 +127,13 @@ const TermsAndConditions = () => {
                 <>
                   Si vous avez des questions concernant ces termes et
                   conditions, veuillez nous contacter à l&apos;adresse suivante
-                  : <strong>exemple@gmail.com</strong>.
+                  : <strong>geanice934@gmail.com</strong>.
                 </>
               ) : (
                 <>
                   If you have any questions regarding these terms and
                   conditions, please contact us at:{" "}
-                  <strong>exemple@gmail.com</strong>.
+                  <strong>geanice934@gmail.com</strong>.
                 </>
               ),
           },
