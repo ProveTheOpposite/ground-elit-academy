@@ -31,7 +31,11 @@ const Footer = () => {
 
           <span className="mb-2 text-sm md:text-base">
             <i className="fa-brands fa-instagram mr-3"></i>
-            <a href="#" className="hover:underline">
+            <a
+              href="https://www.instagram.com/geanice06/"
+              className="hover:underline"
+              target="_blank"
+            >
               Instagram
             </a>
           </span>

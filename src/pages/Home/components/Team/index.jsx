@@ -24,13 +24,13 @@ const Team = () => {
 
         <TeamMember
           name="Nazim Djamalov"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quaerat modi, ducimus eveniet magnam sint."
+          description={translations[language].home.team.nazim.text}
           imgUrl={imageUrl.home.entraineur1}
         />
 
         <TeamMember
           name="Gaetan Houara"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quaerat modi, ducimus eveniet magnam sint."
+          description={translations[language].home.team.gaetan.text}
           imgUrl={imageUrl.home.entraineur2}
           reverse={true}
         />
