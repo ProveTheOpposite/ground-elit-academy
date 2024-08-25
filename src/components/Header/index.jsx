@@ -48,14 +48,16 @@ const Header = ({ openChangeLanguageModal }) => {
 
   return (
     <header
-      className={`${scroll || location.pathname !== "/" ? "bg-white shadow-lg" : ""} fixed left-0 top-0 z-40 flex w-full items-center justify-between bg-transparent px-5 py-4 lg:py-5 xl:h-[78px] xl:justify-between xl:px-12 2xl:px-44`}
+      className={`${scroll || location.pathname !== "/" ? "bg-white shadow-lg" : ""} fixed left-0 top-0 z-40 flex w-full items-center justify-between bg-transparent px-5 lg:pl-8 xl:h-[78px] xl:justify-between xl:px-24 2xl:px-44`}
     >
-      <h2
-        className={`${
-          scroll || location.pathname !== "/" ? "text-black" : "text-white"
-        } text-lg font-bold md:text-xl lg:text-2xl`}
-      >
-        <Link to="/">Ground Elit Academy</Link>
+      <h2>
+        <Link to="/">
+          <img
+            className="w-[90px] md:w-[105px]"
+            src={imageUrl.header.logo}
+            alt="Logo de Ground Elite Academy"
+          />
+        </Link>
       </h2>
 
       <nav className="hidden xl:block">

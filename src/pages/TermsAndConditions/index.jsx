@@ -23,7 +23,7 @@ const TermsAndConditions = () => {
                 <>
                   Bienvenue sur{" "}
                   <strong className="text-red-600">
-                    Ground Elit Academy - GEA
+                    Ground Elite Academy - GEA
                   </strong>
                   . En accédant et en utilisant ce site web, vous acceptez
                   d&apos;être lié par les présents termes et conditions. Si vous
@@ -34,7 +34,7 @@ const TermsAndConditions = () => {
                 <>
                   Welcome to{" "}
                   <strong className="text-red-600">
-                    Ground Elit Academy - GEA
+                    Ground Elite Academy - GEA
                   </strong>
                   . By accessing and using this website, you agree to be bound
                   by these terms and conditions. If you do not agree with these
@@ -71,7 +71,7 @@ const TermsAndConditions = () => {
                   logos, et logiciels présents sur ce site sont la propriété
                   exclusive de{" "}
                   <strong className="text-red-600">
-                    Ground Elit Academy - GEA
+                    Ground Elite Academy - GEA
                   </strong>{" "}
                   ou sont utilisés avec l&apos;autorisation de leurs
                   propriétaires respectifs. Toute reproduction, distribution,
@@ -83,7 +83,7 @@ const TermsAndConditions = () => {
                   All content, including text, images, graphics, logos, and
                   software on this site is the exclusive property of{" "}
                   <strong className="text-red-600">
-                    Ground Elit Academy - GEA
+                    Ground Elite Academy - GEA
                   </strong>{" "}
                   or is used with permission from the respective owners. Any
                   reproduction, distribution, modification, or use of the

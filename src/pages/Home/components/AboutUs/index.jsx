@@ -20,7 +20,7 @@ const AboutUs = () => {
             {language === "fr" ? (
               <>
                 Bienvenue chez{" "}
-                <strong className="text-red-600">Ground Elit Academy</strong>,
+                <strong className="text-red-600">Ground Elite Academy</strong>,
                 votre destination pour la lutte et le grappling à Nice, située
                 au 10 Boulevard Comte de Falicon. Avec deux entraîneurs{" "}
                 <u>professionnels</u>, chacun expert dans sa discipline, nous
@@ -43,7 +43,7 @@ const AboutUs = () => {
             ) : (
               <>
                 Welcome to{" "}
-                <strong className="text-red-600">Ground Elit Academy</strong>,
+                <strong className="text-red-600">Ground Elite Academy</strong>,
                 your destination for wrestling and grappling in Nice, located at
                 10 Boulevard Comte de Falicon. With two <u>professional</u>{" "}
                 coaches, each an expert in their discipline, we provide
@@ -72,8 +72,8 @@ const AboutUs = () => {
             loading="lazy"
             title={
               language === "fr"
-                ? "Emplacement de Ground Elit Academy - GEA sur Google maps"
-                : "Location of Ground Elit Academy - GEA on Google Maps"
+                ? "Emplacement de Ground Elite Academy - GEA sur Google maps"
+                : "Location of Ground Elite Academy - GEA on Google Maps"
             }
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>

@@ -1,23 +1,18 @@
 // prop types
 import PropTypes from "prop-types";
 
-const ScheduleItem = ({
-  wrestling,
-  grappling,
-  childrenTraining,
-  adultsTraining,
-}) => {
+const ScheduleItem = ({ kids, adults, childrenTraining, adultsTraining }) => {
   return (
     <div className="mb-6 last:mb-0">
       <div className="rounded-md p-3 text-sm md:px-0 md:text-base">
         <div>
-          {wrestling && <div className="font-medium">{wrestling}</div>}
+          {kids && <div className="font-medium">{kids}</div>}
           <div>{childrenTraining}</div>
         </div>
 
         <br />
 
-        {grappling && <div className="font-medium">{grappling}</div>}
+        {adults && <div className="font-medium">{adults}</div>}
         <div>{adultsTraining}</div>
       </div>
     </div>
@@ -25,8 +20,8 @@ const ScheduleItem = ({
 };
 
 ScheduleItem.propTypes = {
-  wrestling: PropTypes.string.isRequired,
-  grappling: PropTypes.string.isRequired,
+  kids: PropTypes.string.isRequired,
+  adults: PropTypes.string.isRequired,
   childrenTraining: PropTypes.string.isRequired,
   adultsTraining: PropTypes.string.isRequired,
 };

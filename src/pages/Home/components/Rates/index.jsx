@@ -15,7 +15,7 @@ const Rates = () => {
       </h2>
 
       <div className="flex items-center justify-center">
-        <div className="grid w-[420px] grid-cols-1 grid-rows-3 rounded-xl bg-white px-5 py-6 shadow-md">
+        <div className="grid w-[450px] grid-cols-1 grid-rows-3 rounded-xl bg-white px-5 py-6 shadow-md">
           <h3 className="col-span-full mb-7 text-center text-lg">
             <span className="underline">
               {translations[language].home.rates.subTitle}
@@ -35,7 +35,23 @@ const Rates = () => {
             <h3 className="text-right text-2xl font-bold">40,00€</h3>
           </div>
 
-          <p className="mt-5 text-justify text-sm leading-normal md:text-base">
+          <div className="flex items-end">
+            <div className="mr-2 flex h-[25px] w-[40px] items-end border-b border-l border-black"></div>
+            <div className="translate-y-2.5 text-sm md:text-base">
+              {language === "fr" ? (
+                <>
+                  <span className="font-bold">+50€</span> de frais
+                  d&apos;adhésion.
+                </>
+              ) : (
+                <>
+                  <span className="font-bold">+50€</span> membership fee.
+                </>
+              )}
+            </div>
+          </div>
+
+          <p className="mt-8 text-justify text-sm leading-normal md:text-base">
             {translations[language].home.rates.firstContent}
           </p>
 

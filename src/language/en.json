@@ -54,8 +54,8 @@
       },
       "scheduleItem": {
         "time": {
-          "wrestling": "6:00 PM - 7:30 PM",
-          "grappling": "7:30 PM - 9:00 PM"
+          "kids": "5:30 PM - 6:30 PM",
+          "adults": "6:30 PM - 8:30 PM"
         },
         "event": {
           "childrenTraining": "Children training",
@@ -69,7 +69,7 @@
       "subTitle": "Monthly subscription",
       "adults": "Adults (14 years and older)",
       "kids": "Children (7 years and older)",
-      "firstContent": "Payments are made in cash directly at the club. The amount must be paid between the 1st and the 9th day of the current month.",
+      "firstContent": "Payments are made in cash directly at the club along with the registration forms. The amount must be paid between the 1st and the 9th day of the current month.",
       "secondContent": "A free trial class is available for both disciplines."
     }
   },

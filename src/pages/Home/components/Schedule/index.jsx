@@ -20,10 +20,8 @@ const Schedule = () => {
   const schedule = [
     {
       day: "Monday",
-      wrestlingTime:
-        translations[language].home.schedule.scheduleItem.time.wrestling,
-      grapplingTime:
-        translations[language].home.schedule.scheduleItem.time.grappling,
+      kids: translations[language].home.schedule.scheduleItem.time.kids,
+      adults: translations[language].home.schedule.scheduleItem.time.adults,
       childrenTraining:
         translations[language].home.schedule.scheduleItem.event
           .childrenTraining,
@@ -32,10 +30,8 @@ const Schedule = () => {
     },
     {
       day: "Thursday",
-      wrestlingTime:
-        translations[language].home.schedule.scheduleItem.time.wrestling,
-      grapplingTime:
-        translations[language].home.schedule.scheduleItem.time.grappling,
+      kids: translations[language].home.schedule.scheduleItem.time.kids,
+      adults: translations[language].home.schedule.scheduleItem.time.adults,
       childrenTraining:
         translations[language].home.schedule.scheduleItem.event
           .childrenTraining,
@@ -58,14 +54,15 @@ const Schedule = () => {
           <h3 className="text-center text-lg leading-normal underline">
             {translations[language].home.schedule.subTitle}
           </h3>
+
           <div className="flex flex-col items-center p-5 min-[425px]:flex-row min-[425px]:justify-around md:flex-row md:justify-around">
             {daysOfWeek.map((day, index) => (
               <Fragment key={day}>
                 <div className="w-full text-center first:mb-5 min-[425px]:w-auto min-[425px]:text-left min-[425px]:first:mb-0">
                   <Day name={day} />
                   <ScheduleItem
-                    wrestling={schedule[index]?.wrestlingTime}
-                    grappling={schedule[index]?.grapplingTime}
+                    kids={schedule[index]?.kids}
+                    adults={schedule[index]?.adults}
                     childrenTraining={schedule[index]?.childrenTraining}
                     adultsTraining={schedule[index]?.adultsTraining}
                   />
