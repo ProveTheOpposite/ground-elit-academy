@@ -5,28 +5,35 @@ import { Link } from "react-router-dom";
 // atom
 import { languageState } from "src/recoil";
 // assets
+import { imageUrl } from "src/assets/images/imageList";
 import translations from "src/language/translations";
 
 const Footer = () => {
   const language = useRecoilValue(languageState);
 
   return (
-    <footer className="flex bg-gray-800 px-5 py-8 text-slate-300 sm:px-7 sm:pb-3 lg:justify-center xl:pt-12">
+    <footer className="flex bg-gray-800 px-5 py-8 pt-3 text-slate-300 sm:px-7 sm:pb-3 md:pt-5 lg:justify-center">
       <div className="flex w-full flex-col sm:grid sm:grid-cols-2 sm:grid-rows-[1fr_auto] sm:gap-x-4 sm:gap-y-5 md:gap-x-0 lg:w-[82%] xl:w-[75%] xl:gap-y-8 2xl:w-[1200px]">
         <div className="mb-8 flex flex-col gap-y-2 sm:mb-0 sm:pl-2 xl:pl-5">
-          <Link to="/" className="xl:mb-0">
-            <h2 className="text-2xl font-bold">Ground Elit Academy</h2>
-          </Link>
+          <div>
+            <Link to="/" className="">
+              <img
+                className="w-[140px] md:w-[120px] lg:w-[140px]"
+                src={imageUrl.footer.logo}
+                alt="Logo de Ground Elite Academy"
+              />
+            </Link>
+          </div>
 
           <span className="text-sm md:text-base">
-            &copy; 2024 Ground Elit Academy - GEA Nice
+            &copy; 2024 Ground Elite Academy - GEA Nice
           </span>
 
           <span className="specially text-sm md:text-base">1.0.0</span>
         </div>
 
         {/* links */}
-        <div className="mb-10 flex flex-col gap-y-2 sm:mb-0 sm:flex-wrap sm:content-center xl:content-end xl:gap-x-8 xl:pr-5">
+        <div className="sm: mb-10 flex flex-col gap-y-2 sm:mb-0 sm:flex-wrap sm:content-center sm:justify-end xl:content-end xl:gap-x-8 xl:pr-5">
           <h3 className="mb-2 text-lg font-bold uppercase xl:mb-4">Contact</h3>
 
           <span className="mb-2 text-sm md:text-base">

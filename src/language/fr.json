@@ -49,8 +49,8 @@
       },
       "scheduleItem": {
         "time": {
-          "wrestling": "18h00 - 19h30",
-          "grappling": "19h30 - 21h00"
+          "kids": "17h30 - 18h30",
+          "adults": "18h30 - 20h30"
         },
         "event": {
           "childrenTraining": "Entraînement enfant",
@@ -64,7 +64,7 @@
       "subTitle": "Abonnement mensuel",
       "adults": "Adultes (14 ans et +)",
       "kids": "Enfant (7 ans et +)",
-      "firstContent": "Les paiements se font en espèces directement au club. Le montant doit être payant entre le 1er et le 9ème jour du mois courant.",
+      "firstContent": "Les paiements se font en espèces directement au club avec les fiches d'inscription. Le montant doit être payant entre le 1er et le 9ème jour du mois courant.",
       "secondContent": "Un cours d'essai gratuit est disponible pour les deux disciplines."
     }
   },

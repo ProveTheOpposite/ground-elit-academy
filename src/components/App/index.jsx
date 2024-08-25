@@ -11,14 +11,11 @@ import Header from "../Header";
 import ChangeLanguage from "../Header/ChangeLanguage";
 import Modal from "../Modal";
 import ScrollToTop from "../ScrollToTop";
-import WarningSite from "../WarningSite";
 
 const App = () => {
   // State pour ouvrir la modal du traducteur
   const [isChangeLanguageModalOpen, setChangeLanguageModalOpen] =
     useState(false);
-  // state pour afficher la modal du warning component (avertissement comme quoi le site n'est pas terminé) au moment du chargement du site
-  const [isWarningModalOpen, setIsWarningModalOpen] = useState(true);
 
   // Fonction pour ouvrir la modal de changement de langue
   const handleClickOpenChangeLanguageModal = () =>
@@ -30,15 +27,6 @@ const App = () => {
 
   return (
     <div className="flex min-h-screen flex-col">
-      {isWarningModalOpen && (
-        <Modal
-          onClick={() => setIsWarningModalOpen(false)}
-          className="bg-modal-warning"
-        >
-          <WarningSite setIsWarningModalOpen={setIsWarningModalOpen} />
-        </Modal>
-      )}
-
       <Header openChangeLanguageModal={handleClickOpenChangeLanguageModal} />
 
       {isChangeLanguageModalOpen && (
