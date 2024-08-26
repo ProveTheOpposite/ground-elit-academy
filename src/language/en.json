@@ -52,7 +52,7 @@
         "saturday": "Saturday",
         "sunday": "Sunday"
       },
-      "scheduleItem": {
+      "dayItem": {
         "time": {
           "kids": "5:30 PM - 6:30 PM",
           "adults": "6:30 PM - 8:30 PM"
