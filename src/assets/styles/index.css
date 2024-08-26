@@ -19,11 +19,6 @@
     background-color: rgba(77, 61, 61, 0.5);
   }
 
-  /* temporaire le temps que tout le site soit terminé */
-  .bg-modal-warning {
-    background-color: rgba(10, 9, 9, 0.5);
-  }
-
   /* Enlevé le scroll lorsqu'une popup s'ouvre */
   .overflow-hidden {
     overflow: hidden;
