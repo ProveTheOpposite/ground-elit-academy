@@ -45,9 +45,14 @@
       "subTitle": "Les cours de lutte et de grappling s'alternent chaque semaine.",
       "daysOfWeek": {
         "monday": "Lundi",
-        "thursday": "Jeudi"
+        "tuesday": "Mardi",
+        "wednesday": "Mercredi",
+        "thursday": "Jeudi",
+        "friday": "Vendredi",
+        "saturday": "Samedi",
+        "sunday": "Dimanche"
       },
-      "scheduleItem": {
+      "dayItem": {
         "time": {
           "kids": "17h30 - 18h30",
           "adults": "18h30 - 20h30"

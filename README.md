@@ -8,3 +8,5 @@ Ce site est une SPA basé sur React avec comme serveur de développement local V
 English
 
 This site is a Single Page Application (SPA) built with React, using Vite as the local development server. It showcases a sports club focused on wrestling and grappling in Nice.
+
+[Lien du site](https://www.groundeliteacademy.fr/)

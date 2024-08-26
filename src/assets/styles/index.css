@@ -19,11 +19,6 @@
     background-color: rgba(77, 61, 61, 0.5);
   }
 
-  /* temporaire le temps que tout le site soit terminé */
-  .bg-modal-warning {
-    background-color: rgba(10, 9, 9, 0.5);
-  }
-
   /* Enlevé le scroll lorsqu'une popup s'ouvre */
   .overflow-hidden {
     overflow: hidden;
@@ -41,6 +36,50 @@
   .bg-banner-url {
     background: url("../images/home/bg-banner.jpg") no-repeat center
       center/cover;
+  }
+
+  /* Pour les titres (jours) des dayItem pour les centrer pile au milieu en absolute */
+
+  /* en francais */
+  .center-absolute-tuesday-fr {
+    left: calc(50% - 44.09px / 2);
+  }
+
+  .center-absolute-wednesday-fr {
+    left: calc(50% - 68.52px / 2);
+  }
+
+  .center-absolute-friday-fr {
+    left: calc(50% - 69.33px / 2);
+  }
+
+  .center-absolute-saturday-fr {
+    left: calc(50% - 55.78px / 2);
+  }
+
+  .center-absolute-sunday-fr {
+    left: calc(50% - 75.25px / 2);
+  }
+
+  /* en anglais */
+  .center-absolute-tuesday-en {
+    left: calc(50% - 62.31px / 2);
+  }
+
+  .center-absolute-wednesday-en {
+    left: calc(50% - 87.23px / 2);
+  }
+
+  .center-absolute-friday-en {
+    left: calc(50% - 47.3px / 2);
+  }
+
+  .center-absolute-saturday-en {
+    left: calc(50% - 68.53px / 2);
+  }
+
+  .center-absolute-sunday-en {
+    left: calc(50% - 55.22px / 2);
   }
 
   /* Pour le titre du composant Error Element */
