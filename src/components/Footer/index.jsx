@@ -12,14 +12,14 @@ const Footer = () => {
   const language = useRecoilValue(languageState);
 
   return (
-    <footer className="flex bg-gray-800 px-5 py-8 pt-3 text-slate-300 sm:px-7 sm:pb-3 md:pt-5 lg:justify-center">
+    <footer className="flex bg-gray-800 px-5 py-8 pt-3 text-slate-300 sm:px-7 sm:pb-3 md:pt-5 lg:justify-center lg:pt-8">
       <div className="flex w-full flex-col sm:grid sm:grid-cols-2 sm:grid-rows-[1fr_auto] sm:gap-x-4 sm:gap-y-5 md:gap-x-0 lg:w-[82%] xl:w-[75%] xl:gap-y-8 2xl:w-[1200px]">
         <div className="mb-8 flex flex-col gap-y-1 sm:mb-0 sm:pl-2 xl:pl-5">
           <div>
             <Link to="/" className="">
               <img
-                className="w-[140px] md:w-[120px] lg:w-[140px]"
-                src={imageUrl.footer.logo}
+                className="w-[110px] md:w-[120px]"
+                src={imageUrl.footer.logoFooter}
                 alt="Logo de Ground Elite Academy"
               />
             </Link>
