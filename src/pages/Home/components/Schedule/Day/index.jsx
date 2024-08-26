@@ -79,11 +79,11 @@ const Day = ({
                 {day}
               </h3>
               {language === "fr" ? (
-                <span className="absolute -left-[0%] top-[44%] rotate-45 text-nowrap text-2xl font-bold text-[#858080] min-[612px]:-left-[2%] min-[612px]:text-3xl md:left-[8%] lg:left-[5%] xl:left-[12%] 2xl:left-[5%] 2xl:top-[44%]">
+                <span className="absolute -left-[0%] top-[44%] rotate-45 text-nowrap text-2xl font-bold text-[#858080] min-[612px]:-left-[2%] min-[612px]:text-3xl md:left-[8%] lg:left-[5%] xl:-left-[5%] 2xl:left-[5%] 2xl:top-[44%]">
                   Pas d&apos;entraînement
                 </span>
               ) : (
-                <span className="absolute left-[18%] top-[47%] rotate-45 text-nowrap text-2xl font-bold text-[#858080] sm:left-[20%] sm:text-3xl md:left-[22%] lg:left-[20%] xl:left-[27%] 2xl:left-[21%] 2xl:top-[45%]">
+                <span className="absolute left-[18%] top-[47%] rotate-45 text-nowrap text-2xl font-bold text-[#858080] sm:left-[20%] sm:text-3xl md:left-[25%] lg:left-[23%] xl:left-[18%] 2xl:left-[21%] 2xl:top-[45%]">
                   No training
                 </span>
               )}

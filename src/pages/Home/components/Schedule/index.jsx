@@ -98,11 +98,11 @@ const Schedule = () => {
             {translations[language].home.schedule.subTitle}
           </h3>
 
-          <div className="mt-7 flex flex-col items-center gap-y-6 min-[612px]:grid min-[612px]:grid-cols-2 min-[612px]:gap-6 lg:mt-9 lg:grid-cols-3 xl:grid-cols-[250px_250px_250px_250px] xl:justify-center xl:gap-y-16 xl:justify-self-center 2xl:grid-cols-[300px_300px_300px_300px]">
+          <div className="mt-7 flex flex-col items-center gap-y-6 min-[612px]:grid min-[612px]:grid-cols-2 min-[612px]:gap-6 lg:mt-9 lg:grid-cols-3 xl:relative xl:grid-cols-[250px_250px_250px_250px] xl:grid-rows-2 xl:place-items-center xl:justify-center xl:gap-y-16 2xl:grid-cols-[300px_300px_300px_300px]">
             {dayItem.map((day, index) => (
               <div
                 key={index}
-                className="min-[612px]:last:col-span-full min-[612px]:last:mx-auto min-[612px]:last:w-1/2 lg:last:w-1/3 xl:last:col-span-1 xl:last:w-full"
+                className={`min-[612px]:last:col-span-full min-[612px]:last:mx-auto min-[612px]:last:w-1/2 lg:last:w-1/3 xl:w-full xl:last:col-span-1 xl:last:w-full ${index >= 4 ? "xl:ml-64 xl:last:ml-32 2xl:ml-80 2xl:last:ml-40" : ""}`}
               >
                 <Day
                   index={day.index}
