@@ -1,5 +1,4 @@
 User-agent: *
-Allow: https://www.groundeliteacademy.fr/
-Allow: https://www.groundeliteacademy.fr/terms-and-conditions
+Allow: /
 
 Sitemap: https://www.groundeliteacademy.fr/sitemap.xml
