@@ -55,7 +55,7 @@ const Header = ({ openChangeLanguageModal }) => {
           <img
             className="w-[85px] md:w-[90px]"
             src={
-              scroll
+              scroll || location.pathname !== "/"
                 ? imageUrl.header.logoHeaderBlack
                 : imageUrl.header.logoHeaderWhite
             }

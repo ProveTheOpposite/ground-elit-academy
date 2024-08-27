@@ -17,15 +17,15 @@ const Banner = () => {
         <h1 className="mb-10 text-3xl font-bold leading-tight text-white lg:leading-snug xl:text-4xl xl:leading-tight 2xl:text-5xl 2xl:leading-tight">
           {language === "fr" ? (
             <>
-              Votre club de <span className="text-red-600">Lutte</span> et de{" "}
-              <span className="text-red-600">Grappling</span> vous attend avec
-              impatience
+              Découvrez la <span className="text-red-600">Lutte</span> et le{" "}
+              <span className="text-red-600">Grappling</span> à Nice avec les
+              experts de Ground Elite Academy
             </>
           ) : (
             <>
-              Your <span className="text-red-600">Wrestling</span> and{" "}
-              <span className="text-red-600">Grappling</span> club is eagerly
-              awaiting you
+              Discover <span className="text-red-600">Wrestling</span> and{" "}
+              <span className="text-red-600">Grappling</span> in Nice with the
+              experts at Ground Elite Academy
             </>
           )}
         </h1>
