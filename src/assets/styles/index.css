@@ -5,14 +5,14 @@
 @layer base {
   body {
     background-color: #eee;
-    font-family: "Ubuntu", sans-serif;
+    font-family: Arial, sans-serif;
     /* pour le scrollbar sur Firefox */
     scrollbar-width: 9px;
     scrollbar-color: red;
   }
 
   .specially {
-    font-family: "Tinos", serif;
+    font-family: "Times New Roman", serif;
   }
   /* Pour le composant Modal du change language */
   .bg-modal {
@@ -34,7 +34,7 @@
 
   /* Pour le background du banner */
   .bg-banner-url {
-    background: url("../images/home/bg-banner.jpg") no-repeat center
+    background: url("../images/home/bg-banner.avif") no-repeat center
       center/cover;
   }
 
