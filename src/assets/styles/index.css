@@ -5,7 +5,7 @@
 @layer base {
   body {
     background-color: #eee;
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", sans-serif;
     /* pour le scrollbar sur Firefox */
     scrollbar-width: 9px;
     scrollbar-color: red;

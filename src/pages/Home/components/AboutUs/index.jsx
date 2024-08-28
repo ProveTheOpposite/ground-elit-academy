@@ -20,8 +20,8 @@ const AboutUs = () => {
             {language === "fr" ? (
               <>
                 Bienvenue chez{" "}
-                <strong className="text-red-600">Ground Elite Academy</strong>,
-                votre destination pour la lutte et le grappling à Nice, située
+                <strong className="text-[#b0181c]">Ground Elite Academy</strong>
+                , votre destination pour la lutte et le grappling à Nice, située
                 au 10 Boulevard Comte de Falicon. Avec deux entraîneurs{" "}
                 <u>professionnels</u>, chacun expert dans sa discipline, nous
                 offrons un encadrement de qualité pour tous les niveaux, du
@@ -43,9 +43,9 @@ const AboutUs = () => {
             ) : (
               <>
                 Welcome to{" "}
-                <strong className="text-red-600">Ground Elite Academy</strong>,
-                your destination for wrestling and grappling in Nice, located at
-                10 Boulevard Comte de Falicon. With two <u>professional</u>{" "}
+                <strong className="text-[#b0181c]">Ground Elite Academy</strong>
+                , your destination for wrestling and grappling in Nice, located
+                at 10 Boulevard Comte de Falicon. With two <u>professional</u>{" "}
                 coaches, each an expert in their discipline, we provide
                 high-quality training for all levels, from beginners to
                 competitors. Our club is known for its friendly atmosphere,
