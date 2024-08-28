@@ -12,9 +12,25 @@ const Rates = () => {
   return (
     <section
       id="rates"
-      className={`border-t border-zinc-400 ${isRegistered ? "pb-10" : "pb-16"} p-5`}
+      className="bg-white min-h-screen flex flex-col items-center justify-center"
     >
-      <h2 className="mb-5 text-center text-2xl font-bold lg:text-3xl">
+      <div className="flex flex-col items-center justify-center max-w-[1200px]">
+        <h2>To get acces to the platform</h2>
+        <span>Choose your plan</span>
+        <div className="flex flex-col">
+          <div>
+            <h3>Enfant (7 ans et +)</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, vitae!</p>
+          </div>
+          <div>
+            <h3>25€/month</h3>
+          </div>
+          <p>
+            Les paiements se font en espèces directement au club. Le montant doit être payant entre le 1er et le 9ème jour du mois courant.
+          </p>
+        </div>
+      </div>
+      {/* <h2 className="mb-5 text-center text-2xl font-bold lg:text-3xl">
         {translations[language].home.rates.title}
       </h2>
 
@@ -40,7 +56,7 @@ const Rates = () => {
             {translations[language].home.rates.content}
           </span>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
