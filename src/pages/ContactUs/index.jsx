@@ -100,8 +100,8 @@ const ContactUs = () => {
       });
       reset();
     } catch (error) {
-      console.error("Erreur lors de l'envoi de l'email:", error);
-      toast.error("Une erreur est survenue. Réessayez plus tard ⚠️", {
+      console.error("Erreur lors de l'envoi du message:");
+      toast.error("Une erreur est survenue. Veuillez réessayez ⚠️", {
         duration: Infinity,
       });
     } finally {
