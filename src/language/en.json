@@ -5,7 +5,7 @@
       "aboutUs": "About us",
       "team": "Team",
       "schedule": "Schedule",
-      "rates": "Rates"
+      "rates": "Price"
     },
     "btnTranslation": {
       "fr": "French",
@@ -61,7 +61,7 @@
     },
 
     "rates": {
-      "title": "Rates",
+      "title": "Price",
       "subTitle": "Monthly subscription",
       "adults": "Adults (14 years and older)",
       "kids": "Children (7 years and older)",
