@@ -1,26 +1,22 @@
 {
   "header": {
     "headerList": {
-      "welcome": "Welcome",
+      "welcome": "Home",
       "aboutUs": "About us",
       "team": "Team",
       "schedule": "Schedule",
-      "rates": "Price"
+      "rates": "Rates"
     },
     "btnTranslation": {
       "fr": "French",
       "en": "English"
     },
-    "registration": "Join us",
-    "cancel": "Cancel"
-  },
-
-  "warning": {
-    "firstContent": "The site you are visiting is not yet fully completed. It may contain errors, but these will be fixed before September 9, 2024 (Club opening date).",
-    "secondContent": "If you have any questions, please contact us at the number provided at the bottom of the page."
+    "btnContactUs": "Contact Us"
   },
 
   "home": {
+    "btnSubmit": "Contact Us",
+
     "banner": {
       "btnRegistration": "Join us"
     },
@@ -65,7 +61,7 @@
     },
 
     "rates": {
-      "title": "Price",
+      "title": "Rates",
       "subTitle": "Monthly subscription",
       "adults": "Adults (14 years and older)",
       "kids": "Children (7 years and older)",
@@ -74,13 +70,70 @@
     }
   },
 
+  "contactUs": {
+    "title": "Let's Stay in Touch",
+    "form": {
+      "label": {
+        "firstName": "First Name",
+        "name": "Last Name",
+        "email": "Email",
+        "phoneNumber": "Phone Number",
+        "topic": "Subject",
+        "content": "Message"
+      },
+      "placeholder": {
+        "firstName": "Your first name here...",
+        "name": "Your last name here...",
+        "email": "Your email here...",
+        "phoneNumber": "Your phone number here...",
+        "topic": "Your subject...",
+        "content": "Your message here..."
+      },
+      "errorYup": {
+        "firstName": {
+          "required": "First name is required",
+          "min": "First name is too short"
+        },
+        "name": {
+          "required": "Last name is required",
+          "min": "Last name is too short"
+        },
+        "email": {
+          "required": "Email is required",
+          "email": "Please enter a valid email"
+        },
+        "phoneNumber": {
+          "required": "Phone number is required",
+          "matches": "The number cannot contain letters"
+        },
+        "topic": {
+          "required": "Subject is required",
+          "min": "Please be more specific"
+        },
+        "content": {
+          "required": "Message is required",
+          "min": "Please be more specific"
+        }
+      },
+      "btnSubmit": "Submit"
+    }
+  },
+
   "footer": {
+    "aboutUs": "About us",
+    "home": "Home",
+    "contactUs": "Contact us",
     "privacyAndPolicy": "Privacy & Policy",
-    "termsAndConditions": "Terms and Conditions"
+    "termsAndConditions": "Terms and Conditions",
+    "btnContactUs": "Contact Us"
   },
 
   "termsAndConditions": {
     "title": "Terms and Conditions"
+  },
+
+  "privacyAndPolicy": {
+    "title": "Privacy Policy"
   },
 
   "errorElement": {
