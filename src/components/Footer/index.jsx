@@ -4,76 +4,94 @@ import { useRecoilValue } from "recoil";
 import { Link } from "react-router-dom";
 // atom
 import { languageState } from "src/recoil";
+// component
+import Button from "../Button";
 // assets
 import { imageUrl } from "src/assets/images/imageList";
 import translations from "src/language/translations";
+import ContactItem from "./ContactItem";
+import FooterLink from "./FooterLink";
 
 const Footer = () => {
   const language = useRecoilValue(languageState);
 
   return (
-    <footer className="flex bg-gray-800 px-5 py-8 pt-3 text-slate-300 sm:px-7 sm:pb-3 md:pt-5 lg:justify-center lg:pt-8">
-      <div className="flex w-full flex-col sm:grid sm:grid-cols-2 sm:grid-rows-[1fr_auto] sm:gap-x-4 sm:gap-y-5 md:gap-x-0 lg:w-[82%] xl:w-[75%] xl:gap-y-8 2xl:w-[1200px]">
-        <div className="mb-8 flex flex-col gap-y-1 sm:mb-0 sm:pl-2 xl:pl-5">
-          <div>
-            <Link to="/" className="">
-              <img
-                className="w-[110px] md:w-[120px]"
-                src={imageUrl.footer.logoFooter}
-                alt="Logo de Ground Elite Academy"
-              />
-            </Link>
-          </div>
+    <footer className="flex bg-gray-800 px-5 py-8 text-slate-300 sm:px-7 lg:justify-center lg:py-16">
+      <div className="flex w-full flex-col sm:grid sm:grid-cols-2 sm:grid-rows-[1fr_auto] sm:gap-x-4 sm:gap-y-5 md:gap-10 lg:w-[95%] lg:grid-cols-3 lg:grid-rows-1 2xl:w-[1200px]">
+        <div className="mb-8 flex flex-col gap-y-3 sm:mb-0 sm:items-start sm:pl-2 lg:pl-0 xl:flex-wrap xl:content-center">
+          <Link to="/">
+            <img
+              className="w-[110px] md:w-[120px]"
+              src={imageUrl.footer.logoFooter}
+              alt="Logo de Ground Elite Academy"
+            />
+          </Link>
 
           <span className="text-sm md:text-base">
             &copy; 2024 Ground Elite Academy - GEA Nice
           </span>
 
-          <span className="specially text-sm md:text-base">1.0.0</span>
+          <span className="specially text-sm md:text-base">1.3.0</span>
+
+          <Link className="rounded-full" to="/contact-us">
+            <Button className="bg-[#b0181c] text-white">
+              {translations[language].footer.btnContactUs}
+            </Button>
+          </Link>
         </div>
 
-        {/* links */}
-        <div className="sm: mb-10 flex flex-col gap-y-2 sm:mb-0 sm:flex-wrap sm:content-center sm:justify-end xl:content-end xl:gap-x-8 xl:pr-5">
-          <h3 className="mb-2 text-lg font-bold uppercase xl:mb-4">Contact</h3>
+        {/* About Us */}
+        <div className="mb-8 flex flex-col gap-y-4 sm:mb-0 sm:flex-wrap sm:content-center sm:justify-end lg:justify-center">
+          <h3 className="mb-1 text-lg font-bold uppercase">
+            {translations[language].footer.aboutUs}
+          </h3>
 
-          <span className="mb-2 text-sm md:text-base">
-            <i className="fa-brands fa-instagram mr-3"></i>
-            <a
-              href="https://www.instagram.com/geanice06/"
-              className="hover:underline"
-              target="_blank"
+          <FooterLink to="/">{translations[language].footer.home}</FooterLink>
+
+          <FooterLink to="/contact-us">
+            {translations[language].footer.contactUs}
+          </FooterLink>
+
+          <FooterLink to="/privacy-policy">
+            {translations[language].footer.privacyAndPolicy}
+          </FooterLink>
+
+          <FooterLink to="/terms-and-conditions">
+            {translations[language].footer.termsAndConditions}
+          </FooterLink>
+        </div>
+
+        {/* Contact */}
+        <div className="flex flex-col gap-y-4 sm:col-span-2 lg:col-auto lg:justify-center">
+          <h3 className="mb-1 text-lg font-bold uppercase">Contact</h3>
+
+          <div className="flex flex-col gap-y-4 sm:grid sm:grid-cols-2 sm:grid-rows-2 lg:flex">
+            <ContactItem
+              icon="fa-brands fa-instagram"
+              link="https://www.instagram.com/geanice06/"
             >
               Instagram
-            </a>
-          </span>
+            </ContactItem>
 
-          <span className="mb-2 text-sm md:text-base">
-            <i className="fa-solid fa-phone mr-3"></i>
-            <a href="tel:0621786274" className="cursor-pointer hover:underline">
+            <ContactItem
+              className="justify-self-center"
+              icon="fa-solid fa-envelope"
+              link="mailto:geanice934@gmail.com"
+            >
+              geanice934@gmail.com
+            </ContactItem>
+
+            <ContactItem icon="fa-solid fa-phone" link="tel:0621786274">
               06 21 78 62 74
-            </a>
-          </span>
+            </ContactItem>
 
-          <span className="text-sm md:text-base">
-            <i className="fa-solid fa-location-dot mr-3"></i>
-            10 Bd Comte de Falicon, 06100 Nice
-          </span>
-        </div>
-
-        <div className="flex flex-col items-start gap-y-3 sm:col-span-full sm:flex-row sm:justify-between sm:border-t sm:border-t-slate-400 sm:px-4 sm:pt-2 md:justify-around md:px-0">
-          <Link
-            to="/terms-and-conditions"
-            className="text-sm hover:underline md:text-base"
-          >
-            {translations[language].footer.privacyAndPolicy}
-          </Link>
-
-          <Link
-            to="/terms-and-conditions"
-            className="text-sm hover:underline md:text-base"
-          >
-            {translations[language].footer.termsAndConditions}
-          </Link>
+            <ContactItem
+              className="justify-self-center"
+              icon="fa-solid fa-location-dot"
+            >
+              10 Bd Comte de Falicon, 06100 Nice
+            </ContactItem>
+          </div>
         </div>
       </div>
     </footer>

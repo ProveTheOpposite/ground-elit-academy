@@ -11,16 +11,12 @@
       "fr": "Français",
       "en": "Anglais"
     },
-    "registration": "Inscription",
-    "cancel": "Résilier"
-  },
-
-  "warning": {
-    "firstContent": "Le site que vous visité n'est pas complétement terminé. Le site peut contenir des erreurs ou des manques mais ils seront fixées avant le 9 septembre 2024 (date d'ouverture du club).",
-    "secondContent": "Si vous avez des questions, contactez-nous au numéro indiquez au pied de la page."
+    "btnContactUs": "Contactez-nous"
   },
 
   "home": {
+    "btnSubmit": "Contactez-nous",
+
     "banner": {
       "btnRegistration": "Inscrivez-vous"
     },
@@ -74,13 +70,70 @@
     }
   },
 
+  "contactUs": {
+    "title": "Restons en contact",
+    "form": {
+      "label": {
+        "firstName": "Prénom",
+        "name": "Nom",
+        "email": "Email",
+        "phoneNumber": "Numéro de téléphone",
+        "topic": "Sujet",
+        "content": "Message"
+      },
+      "placeholder": {
+        "firstName": "Votre prénom ici...",
+        "name": "Votre nom ici...",
+        "email": "Votre email ici...",
+        "phoneNumber": "Votre numéro de téléphone ici...",
+        "topic": "Votre sujet ici...",
+        "content": "Votre message ici..."
+      },
+      "errorYup": {
+        "firstName": {
+          "required": "Le prénom est obligatoire",
+          "min": "Le prénom est trop court"
+        },
+        "name": {
+          "required": "Le nom est obligatoire",
+          "min": "Le nom est trop court"
+        },
+        "email": {
+          "required": "L'email est obligatoire",
+          "email": "Veuillez entrer un email valide"
+        },
+        "phoneNumber": {
+          "required": "Le numéro de téléphone est obligatoire",
+          "matches": "Le numéro ne peut pas contenir de lettres"
+        },
+        "topic": {
+          "required": "Le sujet est obligatoire",
+          "min": "Soyez plus claire, s'il vous plaît"
+        },
+        "content": {
+          "required": "Le message est obligatoire",
+          "min": "Soyez plus claire, s'il vous plaît"
+        }
+      },
+      "btnSubmit": "Envoyer"
+    }
+  },
+
   "footer": {
+    "aboutUs": "À propos de nous",
+    "home": "Accueil",
+    "contactUs": "Contactez-nous",
     "privacyAndPolicy": "Politique de Confidentialité",
-    "termsAndConditions": "Termes et Conditions"
+    "termsAndConditions": "Termes et Conditions",
+    "btnContactUs": "Contactez-nous"
   },
 
   "termsAndConditions": {
     "title": "Termes et Conditions"
+  },
+
+  "privacyAndPolicy": {
+    "title": "Politique de Confidentialté"
   },
 
   "errorElement": {
