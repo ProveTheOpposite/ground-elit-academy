@@ -31,7 +31,7 @@ const Footer = () => {
             &copy; 2024 Ground Elite Academy - GEA Nice
           </span>
 
-          <span className="specially text-sm md:text-base">1.3.0</span>
+          <span className="specially text-sm md:text-base">1.5.1</span>
 
           <Link className="rounded-full" to="/contact-us">
             <Button className="bg-[#b0181c] text-white">
