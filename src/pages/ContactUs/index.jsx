@@ -89,14 +89,6 @@ const ContactUs = () => {
   const onSubmit = async (values) => {
     setIsLoading(true);
     try {
-      console.log(
-        "Service ID:",
-        import.meta.env.VITE_SERVICE_ID,
-        "Template ID:",
-        import.meta.env.VITE_TEMPLATE_ID,
-        "Public Key:",
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-      );
       await emailjs.send(
         import.meta.env.VITE_SERVICE_ID,
         import.meta.env.VITE_TEMPLATE_ID,
@@ -108,7 +100,7 @@ const ContactUs = () => {
       });
       reset();
     } catch (e) {
-      console.error("Erreur lors de l'envoi du message : ", e);
+      console.error("Erreur lors de l'envoi du message.");
       toast.error("Une erreur est survenue. Veuillez réessayez ⚠️", {
         duration: Infinity,
       });
