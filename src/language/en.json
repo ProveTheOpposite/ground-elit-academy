@@ -1,26 +1,22 @@
 {
   "header": {
     "headerList": {
-      "welcome": "Welcome",
+      "welcome": "Home",
       "aboutUs": "About us",
       "team": "Team",
       "schedule": "Schedule",
-      "rates": "Rates"
+      "rates": "Price"
     },
     "btnTranslation": {
       "fr": "French",
       "en": "English"
     },
-    "registration": "Join us",
-    "cancel": "Cancel"
-  },
-
-  "warning": {
-    "firstContent": "The site you are visiting is not yet fully completed. It may contain errors, but these will be fixed before September 9, 2024 (Club opening date).",
-    "secondContent": "If you have any questions, please contact us at the number provided at the bottom of the page."
+    "btnContactUs": "Contact Us"
   },
 
   "home": {
+    "btnSubmit": "Contact Us",
+
     "banner": {
       "btnRegistration": "Join us"
     },
@@ -31,7 +27,13 @@
 
     "team": {
       "title": "Our team",
-      "subTitle": "In our club, we have two exceptional coaches who will help you progress to a level you never imagined possible."
+      "subTitle": "In our club, we have two exceptional coaches who will help you progress to a level you never imagined possible.",
+      "nazim": {
+        "text": "Nazim Djamalov, a multiple-time French champion and former member of the national team, is a coach whose experience and talent are recognized beyond borders. With his creativity and teaching skills, he will guide you step by step to perfect your technique and develop your potential. Whether you are a beginner or a competitor, Nazim will tailor his instruction to your needs, helping you progress quickly."
+      },
+      "gaetan": {
+        "text": "Gaetan Houara, a multiple-time French Open champion, is an expert in grappling and wrestling, known for his technical mastery and strategic insight. His dynamic and motivating approach will push you to give your best in every training session. With his support, you'll improve your skills and reach new heights in your practice."
+      }
     },
 
     "schedule": {
@@ -46,10 +48,10 @@
         "saturday": "Saturday",
         "sunday": "Sunday"
       },
-      "scheduleItem": {
+      "dayItem": {
         "time": {
-          "wrestling": "6:00 PM - 7:30 PM",
-          "grappling": "7:30 PM - 9:00 PM"
+          "kids": "5:30 PM - 6:30 PM",
+          "adults": "6:30 PM - 8:30 PM"
         },
         "event": {
           "childrenTraining": "Children training",
@@ -59,98 +61,79 @@
     },
 
     "rates": {
-      "title": "Rates",
+      "title": "Price",
       "subTitle": "Monthly subscription",
       "adults": "Adults (14 years and older)",
       "kids": "Children (7 years and older)",
-      "content": "Payments are made in cash directly at the club. The amount must be paid between the 1st and the 9th day of the current month."
-    },
-
-    "registrationHome": {
-      "title": "Join us now!",
-      "email": "Email",
-      "password": "Password",
-      "errorsMessage": {
-        "required": "Please fill out this field",
-        "invalidEmail": "Invalid email",
-        "minPassword": "6 characters minimum",
-        "maxPassword": "Too long"
-      },
-      "btnSubmit": "Submit",
-      "moreInformation": "You will be redirected to another page to continue your registration. If you are a minor, please ask an adult for permission to sign up."
+      "firstContent": "Payments are made in cash directly at the club along with the registration forms. Moreover, the subscription covers both disciplines. And the amount must be paid between the 1st and the 9th day of the current month.",
+      "secondContent": "A free trial class is available for both disciplines."
     }
   },
 
-  "registration": {
-    "stepBar": {
-      "seeStepsBtn": "View the steps",
-      "closeStepsBtn": "Close",
-      "step1": {
-        "title": "Step 1",
-        "description": "Email and password"
+  "contactUs": {
+    "title": "Let's Stay in Touch",
+    "form": {
+      "label": {
+        "firstName": "First Name",
+        "name": "Last Name",
+        "email": "Email",
+        "phoneNumber": "Phone Number",
+        "topic": "Subject",
+        "content": "Message"
       },
-      "step2": {
-        "title": "Step 2",
-        "description": "Personal informations"
+      "placeholder": {
+        "firstName": "Your first name here...",
+        "name": "Your last name here...",
+        "email": "Your email here...",
+        "phoneNumber": "Your phone number here...",
+        "topic": "Your subject...",
+        "content": "Your message here..."
       },
-      "step3": {
-        "title": "Step 3",
-        "description": "Subscription choice"
+      "errorYup": {
+        "firstName": {
+          "required": "First name is required",
+          "min": "First name is too short"
+        },
+        "name": {
+          "required": "Last name is required",
+          "min": "Last name is too short"
+        },
+        "email": {
+          "required": "Email is required",
+          "email": "Please enter a valid email"
+        },
+        "phoneNumber": {
+          "required": "Phone number is required",
+          "matches": "The number cannot contain letters"
+        },
+        "topic": {
+          "required": "Subject is required",
+          "min": "Please be more specific"
+        },
+        "content": {
+          "required": "Message is required",
+          "min": "Please be more specific"
+        }
       },
-      "step4": {
-        "title": "Step 4",
-        "description": "Payment"
-      }
-    },
-    "personalInformations": {
-      "title": "Personal Informations",
-      "name": "Name",
-      "firstName": "First Name",
-      "age": "Age",
-      "phoneNumber": "Phone number",
-      "birthDay": "Date of birth",
-      "contactEmergency": "Emergency contact phone number",
-      "errorsMessage": {
-        "required": "Please fill out this field",
-        "ageTypeError": "The age must be a number",
-        "phoneNumberLength": "The phone number must contain 10 digits",
-        "birthDayMin": "The date must be after January 1, 1954",
-        "birthDayTypeError": "The date of birth must be a valid date",
-        "contactEmergencyLength": "The phone number must contain 10 digits"
-      },
-      "btnBack": "Back",
       "btnSubmit": "Submit"
-    },
-    "chooseSubscription": {
-      "title": "Choose your subscription",
-      "subTitle": "Monthly subscription",
-      "perMonth": "per month",
-      "adults": "Adults (14 years and older)",
-      "kids": "Children (7 years and older)",
-      "btnChoose": "Select"
-    },
-    "summary": {
-      "subTitle": "Registration summary",
-      "name": "Name",
-      "firstName": "First Name",
-      "age": "Age",
-      "phoneNumber": "Phone number",
-      "birthDay": "Date of birth",
-      "contactEmergency": "Emergency contact number",
-      "email": "Email",
-      "btnUpdate": "Edit information"
-    },
-    "checkout": {
-      "title": "Complete your registration",
-      "subTitle": "Payment method",
-      "btnBuy": "Buy",
-      "byStripe": "Powered by Stripe"
     }
   },
 
   "footer": {
+    "aboutUs": "About us",
+    "home": "Home",
+    "contactUs": "Contact us",
     "privacyAndPolicy": "Privacy & Policy",
-    "termsAndConditions": "Terms and Conditions"
+    "termsAndConditions": "Terms and Conditions",
+    "btnContactUs": "Contact Us"
+  },
+
+  "termsAndConditions": {
+    "title": "Terms and Conditions"
+  },
+
+  "privacyAndPolicy": {
+    "title": "Privacy Policy"
   },
 
   "errorElement": {

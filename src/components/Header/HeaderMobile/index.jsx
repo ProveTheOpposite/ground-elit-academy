@@ -1,23 +1,26 @@
-// hook
+// React & Hooks
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { useRecoilState, useRecoilValue } from "recoil";
-// react router dom
-import { Link } from "react-router-dom";
-// atom
-import { languageState } from "src/recoil";
-// selector
-import { scrollToElementSelector } from "src/recoil";
-// Prop Types
+
+// State Management
+import { languageState, scrollToElementSelector } from "src/recoil";
+
+// Components
+import Button from "src/components/Button";
+
+// PropTypes
 import PropTypes from "prop-types";
-// assets
+
+// Assets & Translations
 import { imageUrl } from "src/assets/images/imageList";
 import translations from "src/language/translations";
 
 const HeaderMobile = ({ setShowMenu, showMenu }) => {
-  const [appearChangeLanguage, setAppearChangeLanguage] = useState(false);
-
+  const [isLanguageMenuVisible, setIsLanguageMenuVisible] = useState(false);
   const [language, setLanguage] = useRecoilState(languageState);
   const scrollToElement = useRecoilValue(scrollToElementSelector);
+  const location = useLocation();
 
   const menuItems = [
     { key: "welcome", icon: "fa-house" },
@@ -27,24 +30,27 @@ const HeaderMobile = ({ setShowMenu, showMenu }) => {
     { key: "rates", icon: "fa-hand-holding-dollar" },
   ];
 
-  const handleClickChangeLanguage = (lang) => {
+  const handleLanguageChange = (lang) => {
     setLanguage(lang);
     localStorage.setItem("language", lang);
+    setIsLanguageMenuVisible(false);
   };
 
   return (
     <nav
-      className={`${showMenu ? "translate-x-0" : "-translate-x-full"} fixed left-0 top-0 flex h-full w-full flex-col justify-evenly bg-white px-8 transition-transform duration-300 ease-out md:px-16 xl:hidden`}
+      className={`${
+        showMenu ? "translate-x-0" : "-translate-x-full"
+      } fixed left-0 top-0 flex h-full w-full flex-col justify-evenly bg-white px-8 transition-transform duration-300 ease-out md:px-16 xl:hidden`}
     >
-      <ul className="flex w-full flex-col justify-center gap-y-7 text-2xl font-medium">
+      <ul className="flex flex-col justify-center gap-y-7 text-2xl font-medium">
         {menuItems.map(({ key, icon }) => (
           <li
             key={key}
-            className={`${scroll || location.pathname === "/registration" || (location.pathname !== "/" && "/registration") ? "text-black" : "text-white"} tracking-wide transition-colors hover:text-red-600`}
+            className="tracking-wide transition-colors hover:text-[#b0181c]"
           >
-            <i className={`fa-solid ${icon} mr-4`}></i>
+            <i className={`fa-solid ${icon} mr-4 w-[30px]`}></i>
             <Link
-              to={location.pathname === "/registration" ? "/" : ""}
+              to={location.pathname !== "/" ? "/" : ""}
               className="cursor-pointer"
               onClick={() => {
                 scrollToElement(key);
@@ -59,33 +65,34 @@ const HeaderMobile = ({ setShowMenu, showMenu }) => {
 
       <div className="flex flex-col items-start gap-y-4">
         <span
-          onClick={() => setAppearChangeLanguage(!appearChangeLanguage)}
-          className="text-lg"
+          onClick={() => setIsLanguageMenuVisible(!isLanguageMenuVisible)}
+          className="cursor-pointer text-lg"
         >
           {language === "fr" ? (
             <>
-              Modifier la <span className="text-red-600">langue</span>
+              Modifier la <strong className="text-[#b0181c]">langue</strong>
             </>
           ) : (
             <>
-              Change the <span className="text-red-600">language</span>
+              Change the <strong className="text-[#b0181c]">language</strong>
             </>
           )}
-
           <i
-            className={`fa-solid fa-chevron-right ml-3 text-xs transition-transform ${appearChangeLanguage && "rotate-90"}`}
+            className={`fa-solid fa-chevron-right ml-3 text-xs transition-transform ${
+              isLanguageMenuVisible ? "rotate-90" : ""
+            }`}
           ></i>
         </span>
 
-        {appearChangeLanguage && (
-          <div
-            className={`${appearChangeLanguage ? "opacity-100" : "opacity-0"} transition-opacity`}
-          >
+        {isLanguageMenuVisible && (
+          <ul className="flex flex-col gap-y-2 transition-opacity">
             {["fr", "en"].map((lang) => (
               <li
                 key={lang}
-                onClick={() => handleClickChangeLanguage(lang)}
-                className={`${language === lang ? "bg-red-100 font-bold" : ""} mb-2 flex cursor-pointer items-center rounded-2xl px-3 py-1 transition-colors hover:bg-red-100`}
+                onClick={() => handleLanguageChange(lang)}
+                className={`${
+                  language === lang ? "bg-red-100 font-bold" : ""
+                } flex cursor-pointer items-center rounded-2xl px-3 py-1 transition-colors hover:bg-red-100`}
                 aria-label={`Switch to ${lang === "fr" ? "French" : "English"}`}
               >
                 {lang === "fr" ? (
@@ -110,23 +117,23 @@ const HeaderMobile = ({ setShowMenu, showMenu }) => {
                 </span>
               </li>
             ))}
-          </div>
+          </ul>
         )}
 
-        {/* <a
-          onClick={() => {
-            scrollToElement("registration");
-            setShowMenu(false);
-          }}
-          className="hover:btn-registration-header rounded-xl border border-red-600 px-5 py-1 text-red-600 transition-colors hover:text-white"
+        <Link
+          className="mt-5"
+          onClick={() => setShowMenu(false)}
+          to="/contact-us"
         >
-          {translations[language].header.registration}
-        </a> */}
+          <Button className="bg-[#b0181c] !text-lg text-white">
+            {translations[language].header.btnContactUs}
+          </Button>
+        </Link>
       </div>
 
       <i
         onClick={() => setShowMenu(false)}
-        className="fa-solid fa-xmark absolute right-5 top-3 flex w-[48px] items-center justify-center rounded-full py-1 text-4xl transition-colors hover:bg-slate-100"
+        className="fa-solid fa-xmark absolute right-3 top-3 flex w-[48px] items-center justify-center rounded-full py-1 text-3xl transition-colors hover:bg-slate-100"
       ></i>
     </nav>
   );

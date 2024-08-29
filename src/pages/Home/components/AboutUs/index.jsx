@@ -20,8 +20,8 @@ const AboutUs = () => {
             {language === "fr" ? (
               <>
                 Bienvenue chez{" "}
-                <strong className="text-red-600">Ground Elit Academy</strong>,
-                votre destination pour la lutte et le grappling à Nice, située
+                <strong className="text-[#b0181c]">Ground Elite Academy</strong>
+                , votre destination pour la lutte et le grappling à Nice, située
                 au 10 Boulevard Comte de Falicon. Avec deux entraîneurs{" "}
                 <u>professionnels</u>, chacun expert dans sa discipline, nous
                 offrons un encadrement de qualité pour tous les niveaux, du
@@ -43,9 +43,9 @@ const AboutUs = () => {
             ) : (
               <>
                 Welcome to{" "}
-                <strong className="text-red-600">Ground Elit Academy</strong>,
-                your destination for wrestling and grappling in Nice, located at
-                10 Boulevard Comte de Falicon. With two <u>professional</u>{" "}
+                <strong className="text-[#b0181c]">Ground Elite Academy</strong>
+                , your destination for wrestling and grappling in Nice, located
+                at 10 Boulevard Comte de Falicon. With two <u>professional</u>{" "}
                 coaches, each an expert in their discipline, we provide
                 high-quality training for all levels, from beginners to
                 competitors. Our club is known for its friendly atmosphere,
@@ -70,12 +70,19 @@ const AboutUs = () => {
             className="h-[230px] w-full rounded-ee-xl rounded-es-xl border border-slate-400 md:h-[350px] lg:h-[450px] xl:h-[100%] xl:rounded-es-none xl:rounded-se-xl"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d720.7949860491581!2d7.255945928606331!3d43.72758859818614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cdcff1863bfd43%3A0xeb78956f41959d12!2s10%20Bd%20Comte%20de%20Falicon%2C%2006100%20Nice!5e0!3m2!1sfr!2sfr!4v1722622448878!5m2!1sfr!2sfr"
             loading="lazy"
+            title={
+              language === "fr"
+                ? "Emplacement de Ground Elite Academy - GEA sur Google maps"
+                : "Location of Ground Elite Academy - GEA on Google Maps"
+            }
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </div>
+
     </section>
   );
 };
 
 export default AboutUs;
+

@@ -11,16 +11,12 @@
       "fr": "Français",
       "en": "Anglais"
     },
-    "registration": "Inscription",
-    "cancel": "Résilier"
-  },
-
-  "warning": {
-    "firstContent": "Le site que vous visité n'est pas complétement terminé. Le site peut contenir des erreurs ou des manques mais ils seront fixées avant le 9 septembre 2024 (date d'ouverture du club).",
-    "secondContent": "Si vous avez des questions, contactez-nous au numéro indiquez au pied de la page."
+    "btnContactUs": "Contactez-nous"
   },
 
   "home": {
+    "btnSubmit": "Contactez-nous",
+
     "banner": {
       "btnRegistration": "Inscrivez-vous"
     },
@@ -31,7 +27,13 @@
 
     "team": {
       "title": "Notre équipe",
-      "subTitle": "Dans notre club, nous accueillons 2 entraineurs hors pairs qui vous feront progresser à un niveau que vous ne pouvez imaginer."
+      "subTitle": "Dans notre club, nous accueillons 2 entraineurs hors pairs qui vous feront progresser à un niveau que vous ne pouvez imaginer.",
+      "nazim": {
+        "text": "Nazim Djamalov, plusieurs fois champion de France et ancien membre de l'équipe nationale, est un entraîneur dont l'expérience et le talent sont reconnus au-delà des frontières. Avec sa créativité et sa pédagogie, il vous guidera pas à pas pour perfectionner votre technique et développer votre potentiel. Que vous soyez débutant ou compétiteur, Nazim saura adapter son enseignement à vos besoins pour vous faire progresser rapidement."
+      },
+      "gaetan": {
+        "text": "Gaetan Houara, plusieurs fois champion d'open de France, est un expert du grappling et de la lutte, connu pour sa maîtrise technique et son sens stratégique. Son approche dynamique et motivante vous poussera à donner le meilleur de vous-même à chaque entraînement. Avec son soutien, vous améliorerez vos compétences et atteindrez de nouveaux sommets dans votre pratique."
+      }
     },
 
     "schedule": {
@@ -39,12 +41,17 @@
       "subTitle": "Les cours de lutte et de grappling s'alternent chaque semaine.",
       "daysOfWeek": {
         "monday": "Lundi",
-        "thursday": "Jeudi"
+        "tuesday": "Mardi",
+        "wednesday": "Mercredi",
+        "thursday": "Jeudi",
+        "friday": "Vendredi",
+        "saturday": "Samedi",
+        "sunday": "Dimanche"
       },
-      "scheduleItem": {
+      "dayItem": {
         "time": {
-          "wrestling": "18h00 - 19h30",
-          "grappling": "19h30 - 21h00"
+          "kids": "17h30 - 18h30",
+          "adults": "18h30 - 20h30"
         },
         "event": {
           "childrenTraining": "Entraînement enfant",
@@ -58,94 +65,75 @@
       "subTitle": "Abonnement mensuel",
       "adults": "Adultes (14 ans et +)",
       "kids": "Enfant (7 ans et +)",
-      "content": "Les paiements se font en espèces directement au club. Le montant doit être payant entre le 1er et le 9ème jour du mois courant."
-    },
-
-    "registrationHome": {
-      "title": "Inscrivez-vous dès maintenant !",
-      "email": "Email",
-      "password": "Mot de passe",
-      "errorsMessage": {
-        "required": "Veuillez remplir ce champ",
-        "invalidEmail": "Email invalide",
-        "minPassword": "6 caractères minimum",
-        "maxPassword": "Trop long"
-      },
-      "btnSubmit": "Soumettre",
-      "moreInformation": "Vous serez redirigé vers une autre page pour continuer l'inscription. Si vous êtes mineur, demandez l'accord à un adulte pour vous inscrire."
+      "firstContent": "Les paiements se font en espèces directement au club avec les fiches d'inscription. De plus, l'abonnement prend en compte les deux disciplines. Et le montant doit être payant entre le 1er et le 9ème jour du mois courant.",
+      "secondContent": "Un cours d'essai gratuit est disponible pour les deux disciplines."
     }
   },
 
-  "registration": {
-    "stepBar": {
-      "seeStepsBtn": "Voir les étapes",
-      "closeStepsBtn": "Fermer",
-      "step1": {
-        "title": "Étape 1",
-        "description": "Email et mot de passe"
+  "contactUs": {
+    "title": "Restons en contact",
+    "form": {
+      "label": {
+        "firstName": "Prénom",
+        "name": "Nom",
+        "email": "Email",
+        "phoneNumber": "Numéro de téléphone",
+        "topic": "Sujet",
+        "content": "Message"
       },
-      "step2": {
-        "title": "Étape 2",
-        "description": "Informations personnelles"
+      "placeholder": {
+        "firstName": "Votre prénom ici...",
+        "name": "Votre nom ici...",
+        "email": "Votre email ici...",
+        "phoneNumber": "Votre numéro de téléphone ici...",
+        "topic": "Votre sujet ici...",
+        "content": "Votre message ici..."
       },
-      "step3": {
-        "title": "Étape 3",
-        "description": "Choix de l'abonnement"
+      "errorYup": {
+        "firstName": {
+          "required": "Le prénom est obligatoire",
+          "min": "Le prénom est trop court"
+        },
+        "name": {
+          "required": "Le nom est obligatoire",
+          "min": "Le nom est trop court"
+        },
+        "email": {
+          "required": "L'email est obligatoire",
+          "email": "Veuillez entrer un email valide"
+        },
+        "phoneNumber": {
+          "required": "Le numéro de téléphone est obligatoire",
+          "matches": "Le numéro ne peut pas contenir de lettres"
+        },
+        "topic": {
+          "required": "Le sujet est obligatoire",
+          "min": "Soyez plus claire, s'il vous plaît"
+        },
+        "content": {
+          "required": "Le message est obligatoire",
+          "min": "Soyez plus claire, s'il vous plaît"
+        }
       },
-      "step4": {
-        "title": "Étape 4",
-        "description": "Paiement"
-      }
-    },
-    "personalInformations": {
-      "title": "Informations personnelles",
-      "name": "Nom",
-      "firstName": "Prénom",
-      "age": "Âge",
-      "phoneNumber": "Numéro de téléphone",
-      "birthDay": "Date de naissance",
-      "contactEmergency": "Numéro de téléphone en cas d'urgence",
-      "errorsMessage": {
-        "required": "Veuillez remplir ce champ",
-        "ageTypeError": "L'âge doit être un nombre",
-        "phoneNumberLength": "Le numéro de téléphone doit contenir 10 chiffres",
-        "birthDayMin": "La date doit être après le 1er janvier 1954",
-        "birthDayTypeError": "La date de naissance doit être une date valide",
-        "contactEmergencyLength": "Le numéro de téléphone doit contenir 10 chiffres"
-      },
-      "btnBack": "Retour",
-      "btnSubmit": "Soumettre"
-    },
-    "chooseSubscription": {
-      "title": "Choisissez votre abonnement",
-      "subTitle": "Abonnement mensuel",
-      "perMonth": "par mois",
-      "adults": "Adultes (14 ans et +)",
-      "kids": "Enfant (7 ans et +)",
-      "btnChoose": "Choisir"
-    },
-    "summary": {
-      "subTitle": "Résumé de votre inscription",
-      "name": "Nom",
-      "firstName": "Prénom",
-      "age": "Âge",
-      "phoneNumber": "Numéro de téléphone",
-      "birthDay": "Date de naissance",
-      "contactEmergency": "Numéro du contact en cas d'urgence",
-      "email": "Email",
-      "btnUpdate": "Modifier les informations"
-    },
-    "checkout": {
-      "title": "Finaliser votre inscription",
-      "subTitle": "Moyen de paiement",
-      "btnBuy": "Payer",
-      "byStripe": "Propulsé par Stripe"
+      "btnSubmit": "Envoyer"
     }
   },
 
   "footer": {
+    "aboutUs": "À propos de nous",
+    "home": "Accueil",
+    "contactUs": "Contactez-nous",
     "privacyAndPolicy": "Politique de Confidentialité",
-    "termsAndConditions": "Termes et Conditions"
+    "termsAndConditions": "Termes et Conditions",
+    "btnContactUs": "Contactez-nous"
+  },
+
+  "termsAndConditions": {
+    "title": "Termes et Conditions"
+  },
+
+  "privacyAndPolicy": {
+    "title": "Politique de Confidentialté"
   },
 
   "errorElement": {

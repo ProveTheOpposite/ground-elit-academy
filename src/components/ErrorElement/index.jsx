@@ -1,6 +1,8 @@
+// hook
+import { useRecoilValue } from "recoil";
 // react router dom
 import { Link } from "react-router-dom";
-import { useRecoilValue } from "recoil";
+// assets
 import translations from "src/language/translations";
 import { languageState } from "src/recoil";
 
@@ -176,7 +178,7 @@ const ErrorElement = () => {
           )}
         </h1>
 
-        <p className="text-center text-xs md:text-sm lg:text-base">
+        <p className="text-center text-xs  md:text-sm lg:text-base">
           {translations[language].errorElement.content}
         </p>
 

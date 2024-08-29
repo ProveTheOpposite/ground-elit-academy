@@ -1,95 +1,63 @@
-// import { lazy } from "react";
 // hook
-import { useState } from "react";
-// import { useLocation } from "react-router-dom";
-// import { useRecoilValue, useSetRecoilState } from "recoil";
-// firebase
-// import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { useEffect, useState } from "react";
 // react router dom
 import { Route, Routes } from "react-router-dom";
-// atom
-import {} from "src/recoil";
+// javascript
+import { initEmailJs } from "src/assets/javascript/emailJs/emailJs";
 // components
+import ContactUs from "src/pages/ContactUs";
 import Home from "src/pages/Home";
+import PrivacyAndPolicy from "src/pages/PrivacyAndPolicy";
+import TermsAndConditions from "src/pages/TermsAndConditions";
 import ErrorElement from "../ErrorElement";
 import Footer from "../Footer";
 import Header from "../Header";
 import ChangeLanguage from "../Header/ChangeLanguage";
 import Modal from "../Modal";
-// import ProtectedRoute from "../ProtectedRoute";
-import WarningSite from "../WarningSite";
-// const Registration = lazy(() => import("src/pages/Registration"));
+import ScrollToTop from "../ScrollToTop";
 
-function App() {
-  // State pour savoir si la modal de changement de langue est ouverte
-  const [isChangeLanguageModalOpen, setChangeLanguageModalOpen] =
-    useState(false);
-  const [isWarningModalOpen, setIsWarningModalOpen] = useState(true);
-  // setter permettant de le définir à true pour pouvoir changer l'UI en conséquence
-  //   const setIsRegistered = useSetRecoilState(isRegisteredState);
-  // setter qui sera réutilisé pour pouvoir faire une requete sur ce user en question
-  //   const setUserId = useSetRecoilState(userIdState);
-  // state permettant de savoir si le user est en inscription et si c'est pas le cas, ca affiche le footer lorsqu'on est sur /registration malencontreusement
-  //   const isRegistering = useRecoilValue(isRegisteringState);
-  //   temporaire juste pour afficher la valeur des step
-  //   const currentStep = useRecoilValue(currentStepState);
+// Table of routes with paths and components
+const ROUTES = [
+  { path: "/", element: <Home /> },
+  { path: "/contact-us", element: <ContactUs /> },
+  { path: "/terms-and-conditions", element: <TermsAndConditions /> },
+  { path: "/privacy-policy", element: <PrivacyAndPolicy /> },
+  { path: "*", element: <ErrorElement /> },
+];
 
-  //   console.log("Current step vaut : ", currentStep);
+const App = () => {
+  // state to handle opening of modals
+  const [openModal, setOpenModal] = useState(null);
 
-  //   const location = useLocation();
+  // function to open/close a modal with a type
+  const toggleModal = (modalType) => setOpenModal(modalType);
 
-  // Fonction pour ouvrir la modal de changement de langue
-  const handleClickOpenChangeLanguageModal = () =>
-    setChangeLanguageModalOpen(true);
-
-  //   effet pour savoir si quelqu'un est inscrit ou non
-  //   useEffect(() => {
-  //     const auth = getAuth();
-  //     onAuthStateChanged(auth, (user) => {
-  //       if (user) {
-  //         // Dans le cas où le user est inscris
-  //         const uidUser = user.uid;
-  //         setIsRegistered(true);
-  //         setUserId(uidUser);
-  //         console.log("Etat du user : connecté ! uId du user : ", uidUser);
-  //       } else {
-  //         // Dans le cas où il n'est pas inscris
-  //         setIsRegistered(false);
-  //         console.log("Etat du user : pas inscrit");
-  //       }
-  //     });
-  //   }, [setIsRegistered, setUserId]);
+  useEffect(() => {
+    initEmailJs();
+  }, []);
 
   return (
     <div className="flex min-h-screen flex-col">
-      {isWarningModalOpen && (
-        <Modal
-          onClick={() => setIsWarningModalOpen(false)}
-          className="bg-modal-warning"
-        >
-          <WarningSite setIsWarningModalOpen={setIsWarningModalOpen} />
+      <Header openChangeLanguageModal={() => toggleModal("changeLanguage")} />
+
+      {openModal === "changeLanguage" && (
+        <Modal onClick={() => toggleModal(null)} className="bg-modal">
+          <ChangeLanguage closeModal={() => toggleModal(null)} />
         </Modal>
       )}
-      <Header openChangeLanguageModal={handleClickOpenChangeLanguageModal} />
-      {isChangeLanguageModalOpen && (
-        <Modal
-          onClick={() => setChangeLanguageModalOpen(false)}
-          className="bg-modal"
-        >
-          <ChangeLanguage closeModal={setChangeLanguageModalOpen} />
-        </Modal>
-      )}
+      <ScrollToTop />
+
       <main className="flex flex-1 flex-col">
         <Routes>
-          <Route path="/" element={<Home />} />
-          {/* <Route path="/registration" element={<Registration />} /> */}
-          <Route path="*" element={<ErrorElement />} />
+          {ROUTES.map(({ path, element }, index) => (
+            <Route key={index} path={path} element={element} />
+          ))}
         </Routes>
       </main>
-      {/* {location.pathname === "/registration" && isRegistering ? "" : <Footer />}{" "} */}
+
       <Footer />
     </div>
   );
-}
+};
 
 export default App;
