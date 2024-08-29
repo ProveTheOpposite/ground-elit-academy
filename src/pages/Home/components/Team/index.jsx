@@ -8,64 +8,12 @@ import TeamMember from "./TeamMember";
 import { imageUrl } from "src/assets/images/imageList";
 import translations from "src/language/translations";
 
-import team from "src/assets/images/home/t11.png";
-import team2 from "src/assets/images/home/t2.png";
-
 const Team = () => {
   const language = useRecoilValue(languageState);
 
   return (
-    <section
-      id="team"
-      className="flex-direction-c relative flex min-h-[105vh] items-center justify-center border-t bg-white p-5 pb-12 lg:px-12"
-    >
-      <img
-        src={team}
-        alt="team"
-        className="absolute bottom-0 left-[-700px] h-[900px] object-cover"
-      />
-      <img
-        src={team2}
-        alt="team"
-        className="absolute bottom-0 right-[-220px] h-[820px] object-cover"
-      />
-      <div className="flex w-full max-w-[1100px] flex-col items-center justify-center">
-        <h1 className="text-[60px] font-bold uppercase text-red-500">
-          <span className="text-white">Our</span>{" "}
-          <span className="text-red-500">Team</span>
-        </h1>
-        <p className="mt-5 max-w-[700px] text-center text-[20px] text-gray-300">
-          Dans notre club, nous accueillons 2 entraineurs hors pairs qui vous
-          feront progresser à un niveau que vous ne pouvez imaginer.
-        </p>
-        <div className="mt-40 flex w-full items-center justify-between">
-          <div className="flex w-[450px] flex-col gap-5">
-            <h2 className="font-800 text-[28px] text-white">Nazim Djamalov</h2>
-            <p className="text-[16px] text-gray-300">
-              Nazim Djamalov, plusieurs fois champion de France et ancien membre
-              de l&apos;équipe nationale, est un entraîneur dont
-              l&apos;expérience et le talent sont reconnus au-delà des
-              frontières. Avec sa créativité et sa pédagogie, il vous guidera
-              pas à pas pour perfectionner votre technique et développer votre
-              potentiel. Que vous soyez débutant ou compétiteur, Nazim saura
-              adapter son enseignement à vos besoins pour vous faire progresser
-              rapidement.
-            </p>
-          </div>
-          <div className="flex w-[450px] flex-col gap-5 text-right">
-            <h2>gaetan</h2>
-            <p>
-              Gaetan Houara, plusieurs fois champion d&apos;open de France, est
-              un expert du grappling et de la lutte, connu pour sa maîtrise
-              technique et son sens stratégique. Son approche dynamique et
-              motivante vous poussera à donner le meilleur de vous-même à chaque
-              entraînement. Avec son soutien, vous améliorerez vos compétences
-              et atteindrez de nouveaux sommets dans votre pratique.
-            </p>
-          </div>
-        </div>
-      </div>
-      {/* <h2 className="mb-5 text-center text-2xl font-bold lg:text-3xl">
+    <section id="team" className="border-t border-zinc-400 p-5 pb-12 lg:px-12">
+      <h2 className="mb-5 text-center text-2xl font-bold lg:text-3xl">
         {translations[language].home.team.title}
       </h2>
 
@@ -86,7 +34,7 @@ const Team = () => {
           imgUrl={imageUrl.home.entraineur2}
           reverse={true}
         />
-      </div> */}
+      </div>
     </section>
   );
 };
