@@ -84,14 +84,7 @@ const Schedule = () => {
   ];
 
   return (
-    <section
-      id="schedule"
-      className="border-t border-zinc-400 p-5 pb-12 lg:px-12"
-    >
-      <h2 className="mb-5 text-center text-2xl font-bold lg:text-3xl">
-        {translations[language].home.schedule.title}
-      </h2>
-
+    <section className="flex min-h-screen flex-col items-center justify-center bg-white"></section>
       <div className="container mx-auto">
         <div className="overflow-hidden rounded-xl bg-white p-4 shadow-lg min-[612px]:px-7 min-[612px]:py-5">
           <h3 className="text-center text-lg leading-normal underline">
