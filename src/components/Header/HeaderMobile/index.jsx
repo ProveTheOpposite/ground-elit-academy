@@ -126,7 +126,7 @@ const HeaderMobile = ({ setShowMenu, showMenu }) => {
           to="/contact-us"
         >
           <Button className="bg-[#b0181c] !text-lg text-white">
-            Contact us
+            {translations[language].header.btnContactUs}
           </Button>
         </Link>
       </div>
