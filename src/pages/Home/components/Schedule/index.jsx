@@ -76,8 +76,7 @@ const Schedule = () => {
     //     </div>
     //   </div>
     // </section>
-    <section className="bg-white min-h-screen flex flex-col items-center justify-center">
-    </section>
+    <section className="flex min-h-screen flex-col items-center justify-center bg-white"></section>
   );
 };
 
