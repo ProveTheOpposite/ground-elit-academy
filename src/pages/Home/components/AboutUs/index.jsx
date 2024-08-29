@@ -79,10 +79,8 @@ const AboutUs = () => {
           ></iframe>
         </div>
       </div>
-
     </section>
   );
 };
 
 export default AboutUs;
-
