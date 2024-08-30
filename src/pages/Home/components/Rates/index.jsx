@@ -60,7 +60,7 @@ const Rates = () => {
             {translations[language].home.rates.secondContent}
           </p>
         </div>
-      </div> */}
+      </div>
     </section>
   );
 };
