@@ -1,4 +1,5 @@
 // React & Hooks
+
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useRecoilValue } from "recoil";
@@ -14,6 +15,7 @@ import HeaderMobile from "./components/HeaderMobile";
 import PropTypes from "prop-types";
 
 // Assets & Translations
+
 import { imageUrl } from "src/assets/images/imageList";
 import translations from "src/language/translations";
 
@@ -22,9 +24,11 @@ const Header = ({ openChangeLanguageModal }) => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
 
   const language = useRecoilValue(languageState);
+
   const scrollToElement = useRecoilValue(scrollToElementSelector);
 
   const location = useLocation();
+
 
   // Change header style on scroll
   useEffect(() => {
