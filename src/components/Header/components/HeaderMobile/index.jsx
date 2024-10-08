@@ -18,8 +18,11 @@ import translations from "src/language/translations";
 
 const HeaderMobile = ({ setShowMenu, showMenu }) => {
   const [isLanguageMenuVisible, setIsLanguageMenuVisible] = useState(false);
+
   const [language, setLanguage] = useRecoilState(languageState);
+
   const scrollToElement = useRecoilValue(scrollToElementSelector);
+
   const location = useLocation();
 
   const menuItems = [
@@ -28,8 +31,8 @@ const HeaderMobile = ({ setShowMenu, showMenu }) => {
     { key: "team", icon: "fa-users" },
     { key: "schedule", icon: "fa-calendar-days" },
     { key: "rates", icon: "fa-hand-holding-dollar" },
+    { key: "faq", icon: "fa-circle-question" },
   ];
-
   const handleLanguageChange = (lang) => {
     setLanguage(lang);
     localStorage.setItem("language", lang);
@@ -40,7 +43,7 @@ const HeaderMobile = ({ setShowMenu, showMenu }) => {
     <nav
       className={`${
         showMenu ? "translate-x-0" : "-translate-x-full"
-      } fixed left-0 top-0 flex h-full w-full flex-col justify-evenly bg-white px-8 transition-transform duration-300 ease-out md:px-16 xl:hidden`}
+      } fixed left-0 top-0 flex min-h-full w-full flex-col justify-evenly bg-white px-8 transition-transform duration-300 ease-out md:px-16 xl:hidden`}
     >
       <ul className="flex flex-col justify-center gap-y-7 text-2xl font-medium">
         {menuItems.map(({ key, icon }) => (
@@ -126,14 +129,14 @@ const HeaderMobile = ({ setShowMenu, showMenu }) => {
           to="/contact-us"
         >
           <Button className="bg-[#b0181c] !text-lg text-white">
-            Contact us
+            {translations[language].header.btnContactUs}
           </Button>
         </Link>
       </div>
 
       <i
         onClick={() => setShowMenu(false)}
-        className="fa-solid fa-xmark absolute right-3 top-3 flex w-[48px] items-center justify-center rounded-full py-1 text-3xl transition-colors hover:bg-slate-100"
+        className="fa-solid fa-xmark absolute right-3 top-3 flex w-[48px] cursor-pointer items-center justify-center rounded-full py-1 text-3xl transition-colors hover:bg-slate-100"
       ></i>
     </nav>
   );
@@ -142,6 +145,7 @@ const HeaderMobile = ({ setShowMenu, showMenu }) => {
 HeaderMobile.propTypes = {
   showMenu: PropTypes.bool.isRequired,
   setShowMenu: PropTypes.func.isRequired,
+  openSignOutModal: PropTypes.func,
 };
 
 export default HeaderMobile;

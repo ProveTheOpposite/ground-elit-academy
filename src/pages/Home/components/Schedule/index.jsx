@@ -1,122 +1,90 @@
 // hook
+import { useRef, useState } from "react";
 import { useRecoilValue } from "recoil";
+
+// Flatpickr
+import "flatpickr/dist/flatpickr.min.css";
+import { English } from "flatpickr/dist/l10n/default";
+import { French } from "flatpickr/dist/l10n/fr";
+import Flatpickr from "react-flatpickr";
 // atom
 import { languageState } from "src/recoil";
+
 // components
-import Day from "./Day";
+import DecorativeSvg from "src/components/DecorativeSvg";
+import Calendar from "./components/Calendar";
+
 // assets
 import translations from "src/language/translations";
 
 const Schedule = () => {
+  const [selectedDate, setSelectedDate] = useState(new Date());
+
   const language = useRecoilValue(languageState);
 
-  const dayItem = [
-    {
-      index: "monday",
-      day: translations[language].home.schedule.daysOfWeek.monday,
-      kidsTime: translations[language].home.schedule.dayItem.time.kids,
-      adultTime: translations[language].home.schedule.dayItem.time.adults,
-      childrenTraining:
-        translations[language].home.schedule.dayItem.event.childrenTraining,
-      adultsTraining:
-        translations[language].home.schedule.dayItem.event.adultsTraining,
-    },
-    {
-      index: "tuesday",
-      day: translations[language].home.schedule.daysOfWeek.tuesday,
-      kidsTime: translations[language].home.schedule.dayItem.time.kids,
-      adultTime: translations[language].home.schedule.dayItem.time.adults,
-      childrenTraining:
-        translations[language].home.schedule.dayItem.event.childrenTraining,
-      adultsTraining:
-        translations[language].home.schedule.dayItem.event.adultsTraining,
-    },
-    {
-      index: "wednesday",
-      day: translations[language].home.schedule.daysOfWeek.wednesday,
-      kidsTime: translations[language].home.schedule.dayItem.time.kids,
-      adultTime: translations[language].home.schedule.dayItem.time.adults,
-      childrenTraining:
-        translations[language].home.schedule.dayItem.event.childrenTraining,
-      adultsTraining:
-        translations[language].home.schedule.dayItem.event.adultsTraining,
-    },
-    {
-      index: "thursday",
-      day: translations[language].home.schedule.daysOfWeek.thursday,
-      kidsTime: translations[language].home.schedule.dayItem.time.kids,
-      adultTime: translations[language].home.schedule.dayItem.time.adults,
-      childrenTraining:
-        translations[language].home.schedule.dayItem.event.childrenTraining,
-      adultsTraining:
-        translations[language].home.schedule.dayItem.event.adultsTraining,
-    },
-    {
-      index: "friday",
-      day: translations[language].home.schedule.daysOfWeek.friday,
-      kidsTime: translations[language].home.schedule.dayItem.time.kids,
-      adultTime: translations[language].home.schedule.dayItem.time.adults,
-      childrenTraining:
-        translations[language].home.schedule.dayItem.event.childrenTraining,
-      adultsTraining:
-        translations[language].home.schedule.dayItem.event.adultsTraining,
-    },
-    {
-      index: "saturday",
-      day: translations[language].home.schedule.daysOfWeek.saturday,
-      kidsTime: translations[language].home.schedule.dayItem.time.kids,
-      adultTime: translations[language].home.schedule.dayItem.time.adults,
-      childrenTraining:
-        translations[language].home.schedule.dayItem.event.childrenTraining,
-      adultsTraining:
-        translations[language].home.schedule.dayItem.event.adultsTraining,
-    },
-    {
-      index: "sunday",
-      day: translations[language].home.schedule.daysOfWeek.sunday,
-      kidsTime: translations[language].home.schedule.dayItem.time.kids,
-      adultTime: translations[language].home.schedule.dayItem.time.adults,
-      childrenTraining:
-        translations[language].home.schedule.dayItem.event.childrenTraining,
-      adultsTraining:
-        translations[language].home.schedule.dayItem.event.adultsTraining,
-    },
-  ];
+  const calendarRef = useRef(null);
+
+  const locale = language === "fr" ? French : English;
+
+  // function to allow to go on a date
+  const handleDateChange = (date) => {
+    setSelectedDate(date[0]);
+    const calendarApi = calendarRef.current.getApi();
+    calendarApi.gotoDate(date[0]);
+  };
 
   return (
     <section
       id="schedule"
-      className="border-t border-zinc-400 p-5 pb-12 lg:px-12"
+      className="relative flex min-h-screen flex-col justify-center bg-white px-5 py-12"
     >
-      <h2 className="mb-5 text-center text-2xl font-bold lg:text-3xl">
-        {translations[language].home.schedule.title}
-      </h2>
+      <div className="z-10 md:mx-auto md:w-[90%] lg:w-[95%] xl:w-[1230px]">
+        <h2 className="mb-5 text-3xl font-bold uppercase lg:text-4xl">
+          {language === "fr" ? (
+            <>
+              Notre <span className="text-[#b0181c]">planning</span>
+            </>
+          ) : (
+            <>
+              Our <span className="text-[#b0181c]">schedule</span>
+            </>
+          )}
+        </h2>
 
-      <div className="container mx-auto">
-        <div className="overflow-hidden rounded-xl bg-white p-4 shadow-lg min-[612px]:px-7 min-[612px]:py-5">
-          <h3 className="text-center text-lg leading-normal underline">
+        <div className="mb-7 lg:flex lg:items-start lg:justify-between">
+          <h2 className="mb-7 text-lg text-gray-600 md:mb-5 lg:mb-0 lg:flex-[0.75] lg:pr-10">
             {translations[language].home.schedule.subTitle}
-          </h3>
+          </h2>
 
-          <div className="mt-7 flex flex-col items-center gap-y-6 min-[612px]:grid min-[612px]:grid-cols-2 min-[612px]:gap-6 lg:mt-9 lg:grid-cols-3 xl:relative xl:grid-cols-[250px_250px_250px_250px] xl:grid-rows-2 xl:place-items-center xl:justify-center xl:gap-y-16 2xl:grid-cols-[300px_300px_300px_300px]">
-            {dayItem.map((day, index) => (
-              <div
-                key={index}
-                className={`min-[612px]:last:col-span-full min-[612px]:last:mx-auto min-[612px]:last:w-1/2 lg:last:w-1/3 xl:w-full xl:last:col-span-1 xl:last:w-full ${index >= 4 ? "xl:ml-64 xl:last:ml-32 2xl:ml-80 2xl:last:ml-40" : ""}`}
+          <div className="relative lg:flex-[0.25]">
+            <div className="pl-3.5">
+              <svg
+                className="absolute top-[32%] h-4 w-4 text-gray-500 xl:top-[32%] dark:text-gray-400"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
               >
-                <Day
-                  index={day.index}
-                  day={day.day}
-                  kidsTime={day.kidsTime}
-                  adultTime={day.adultTime}
-                  childrenTraining={day.childrenTraining}
-                  adultsTraining={day.adultsTraining}
-                />
-              </div>
-            ))}
+                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+              </svg>
+            </div>
+
+            <Flatpickr
+              value={selectedDate}
+              onChange={handleDateChange}
+              options={{ dateFormat: "Y-m-d", locale }}
+              placeholder={
+                language === "fr" ? "Sélectionner une date" : "Select date"
+              }
+              className="w-full rounded-xl border border-gray-300 p-2.5 pl-10 shadow-md focus:border-[#b0181c] focus:ring-[#b0181c]"
+            />
           </div>
         </div>
+
+        <Calendar calendarRef={calendarRef} />
       </div>
+
+      <DecorativeSvg fillColor="#fff" />
     </section>
   );
 };

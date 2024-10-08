@@ -199,9 +199,7 @@ const TermsAndConditions = () => {
               {section.title}
             </h2>
 
-            <p className="text-justify text-sm md:text-base">
-              {section.content}
-            </p>
+            <p className="text-justify lg:text-lg">{section.content}</p>
           </div>
         ))}
       </main>

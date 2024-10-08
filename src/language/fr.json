@@ -5,7 +5,8 @@
       "aboutUs": "À propos de nous",
       "team": "Équipe",
       "schedule": "Planning",
-      "rates": "Tarifs"
+      "rates": "Tarifs",
+      "faq": "FAQs"
     },
     "btnTranslation": {
       "fr": "Français",
@@ -15,19 +16,24 @@
   },
 
   "home": {
-    "btnSubmit": "Contactez-nous",
+    "btnContactUs": "Contactez-nous",
 
     "banner": {
       "btnRegistration": "Inscrivez-vous"
     },
 
     "aboutUs": {
-      "title": "À propos de nous"
+      "title": "À propos de nous",
+      "buttonVideo": {
+        "play": "Lire",
+        "pause": "Pause"
+      },
+      "videoNotSupported": "Votre navigateur ne supporte pas la vidéo HTML."
     },
 
     "team": {
       "title": "Notre équipe",
-      "subTitle": "Dans notre club, nous accueillons 2 entraineurs hors pairs qui vous feront progresser à un niveau que vous ne pouvez imaginer.",
+      "subTitle": "Nos entraîneurs allient expertise et passion pour vous accompagner vers l'excellence, quel que soit votre niveau. Ensemble, nous vous aiderons à surpasser vos limites et à révéler le meilleur de vous-même.",
       "nazim": {
         "text": "Nazim Djamalov, plusieurs fois champion de France et ancien membre de l'équipe nationale, est un entraîneur dont l'expérience et le talent sont reconnus au-delà des frontières. Avec sa créativité et sa pédagogie, il vous guidera pas à pas pour perfectionner votre technique et développer votre potentiel. Que vous soyez débutant ou compétiteur, Nazim saura adapter son enseignement à vos besoins pour vous faire progresser rapidement."
       },
@@ -38,7 +44,7 @@
 
     "schedule": {
       "title": "Nos horaires",
-      "subTitle": "Les cours de lutte et de grappling s'alternent chaque semaine.",
+      "subTitle": "Les entraînement ont lieu le lundi et jeudi. Les cours de lutte et de grappling s'alternent chaque semaine. Consultez régulièrement notre planning pour être au courant des futurs changements.",
       "daysOfWeek": {
         "monday": "Lundi",
         "tuesday": "Mardi",
@@ -61,12 +67,88 @@
     },
 
     "rates": {
-      "title": "Tarifs",
       "subTitle": "Abonnement mensuel",
-      "adults": "Adultes (14 ans et +)",
-      "kids": "Enfant (7 ans et +)",
-      "firstContent": "Les paiements se font en espèces directement au club avec les fiches d'inscription. De plus, l'abonnement prend en compte les deux disciplines. Et le montant doit être payant entre le 1er et le 9ème jour du mois courant.",
-      "secondContent": "Un cours d'essai gratuit est disponible pour les deux disciplines."
+      "content": "Les paiements se font en espèces directement au club avec les fiches d'inscription. De plus, l'abonnement prend en compte les deux disciplines (lutte et grappling). Et le montant doit être payant entre le 1er et le 9ème jour du mois courant.",
+      "secondContent": "Un cours d'essai gratuit est disponible pour les deux disciplines.",
+      "card": {
+        "kids": {
+          "title": "Enfant",
+          "who": "L'abonnement enfant concerne les enfants de 5 à 13 ans."
+        },
+        "adults": {
+          "title": "Adulte",
+          "who": "L'abonnement adulte concerne les personnes d'au moins 14 ans."
+        },
+        "perMonth": "€/mois"
+      }
+    },
+
+    "faq": {
+      "btnTheme": {
+        "general": "Général",
+        "new": "Nouveaux",
+        "courses": "Cours"
+      },
+      "questions": {
+        "general": {
+          "questionOne": {
+            "title": "Quelles sont les disciplines enseignées dans votre club ?",
+            "answer": "Nous enseignons la lutte libre et le grappling."
+          },
+          "questionTwo": {
+            "title": "Quels sont les horaires d'ouverture du club ?"
+          },
+          "questionThree": {
+            "title": "Quels sont les frais d'adhésion et d'abonnement ?"
+          },
+          "questionFour": {
+            "title": "Offrez-vous une séance d'essai gratuite ?",
+            "answer": "Bien sûr, un cours d'essaie gratuit est disponible pour chaque discipline."
+          }
+        },
+
+        "new": {
+          "questionOne": {
+            "title": "Dois-je avoir une expérience préalable pour rejoindre le club ?",
+            "answer": "Non, si vous débutez les sports de combat ou même dans le sport en général, vous êtes tout de même la bienvenu chez nous. Il n'est jamais trop tard pour apprendre un sport de combat comme la lutte et le grappling."
+          },
+          "questionTwo": {
+            "title": "Quels équipements sont nécessaires pour commencer ?",
+            "answer": "Des chaussures de lutte sont conseillés, mis à part cela, rien n'est nécessaire excepté votre détermination 😉."
+          },
+          "questionThree": {
+            "title": "Proposez-vous des cours pour les débutants ?",
+            "answer": "Non, mais nous nous adaptons en fonction du niveau des personnes que nous recevons au club."
+          },
+          "questionFour": {
+            "title": "Quels sont les avantages de rejoindre un club de lutte et grappling ?",
+            "answer": "La pratique de la lutte et du grappling est bénéfique pour tout le monde, peu importe l'âge ou le sexe, en raison des nombreux avantages physiques, mentaux et sociaux qu'ils apportent. Ces sports permettent un développement physique complet, en améliorant la force, l'endurance, la flexibilité et la coordination. Que vous soyez enfant ou adulte, la lutte et le grappling renforcent l'ensemble du corps tout en offrant une excellente condition cardiovasculaire."
+          }
+        },
+
+        "courses": {
+          "questionOne": {
+            "title": "Comment les cours sont-ils structurés ?",
+            "answer": "Les cours sont structurés de la façon suivante : échauffement, technique, sparring. Chacune de ces parties peuvent durées plus longtemps que d'autres."
+          },
+          "questionTwo": {
+            "title": "Combien de temps dure une séance d'entraînement ?",
+            "answer": "Une séance d'entraînement dure une heure pour les enfants et deux heures pour les adultes."
+          },
+          "questionThree": {
+            "title": "Les cours sont-ils mixtes ou séparés par sexe ?",
+            "answer": "Les cours sont mixtes."
+          },
+          "questionFour": {
+            "title": "Proposez-vous des cours particuliers ou des entraînements en petit groupe ?",
+            "answer": "Pour le moment, nous ne proposons pas de cours particuliers, seulement des entraînements d'un seul groupe."
+          }
+        }
+      }
+    },
+
+    "requestForInformations": {
+      "content": "Pour toute demande d'information ou autre, contactez-nous dès maintenant !"
     }
   },
 

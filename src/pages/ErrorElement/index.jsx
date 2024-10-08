@@ -2,9 +2,10 @@
 import { useRecoilValue } from "recoil";
 // react router dom
 import { Link } from "react-router-dom";
+// atom
+import { languageState } from "src/recoil";
 // assets
 import translations from "src/language/translations";
-import { languageState } from "src/recoil";
 
 const ErrorElement = () => {
   const language = useRecoilValue(languageState);
@@ -166,7 +167,7 @@ const ErrorElement = () => {
       </div>
 
       <div className="flex flex-col items-center gap-y-5 px-3 pb-9 md:p-0 lg:items-start">
-        <h1 className="text-3xl font-bold md:text-5xl xl:lg:text-6xl 2xl:text-7xl">
+        <h1 className="text-4xl font-bold md:text-5xl xl:lg:text-6xl 2xl:text-7xl">
           {language === "fr" ? (
             <>
               Erreur <span className="error-elem-text-fill">404</span>
@@ -178,13 +179,13 @@ const ErrorElement = () => {
           )}
         </h1>
 
-        <p className="text-center text-xs  md:text-sm lg:text-base">
+        <p className="text-center md:text-sm lg:text-base">
           {translations[language].errorElement.content}
         </p>
 
         <Link
           to="/"
-          className="rounded-lg border border-transparent bg-slate-600 px-3 py-2 text-xs text-white transition-colors hover:border-slate-600 hover:bg-transparent hover:text-slate-600 md:text-sm lg:text-base"
+          className="rounded-lg border border-transparent bg-slate-600 px-3 py-2 text-white transition-colors hover:border-slate-600 hover:bg-transparent hover:text-slate-600 md:text-sm lg:text-base"
         >
           {translations[language].errorElement.btnWelcome}
         </Link>

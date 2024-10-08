@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 // react router dom
 import { Route, Routes } from "react-router-dom";
+// atom
 // javascript
 import { initEmailJs } from "src/assets/javascript/emailJs/emailJs";
 // components
@@ -9,10 +10,10 @@ import ContactUs from "src/pages/ContactUs";
 import Home from "src/pages/Home";
 import PrivacyAndPolicy from "src/pages/PrivacyAndPolicy";
 import TermsAndConditions from "src/pages/TermsAndConditions";
-import ErrorElement from "../ErrorElement";
+import ErrorElement from "../../pages/ErrorElement";
 import Footer from "../Footer";
 import Header from "../Header";
-import ChangeLanguage from "../Header/ChangeLanguage";
+import ChangeLanguage from "../Header/components/ChangeLanguage";
 import Modal from "../Modal";
 import ScrollToTop from "../ScrollToTop";
 
@@ -38,16 +39,22 @@ const App = () => {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <Header openChangeLanguageModal={() => toggleModal("changeLanguage")} />
+      <Header
+        openChangeLanguageModal={() => toggleModal("changeLanguage")}
+      />
 
       {openModal === "changeLanguage" && (
-        <Modal onClick={() => toggleModal(null)} className="bg-modal">
+        <Modal
+          onClick={() => toggleModal(null)}
+          className="bg-modal-change-language"
+        >
           <ChangeLanguage closeModal={() => toggleModal(null)} />
         </Modal>
       )}
+
       <ScrollToTop />
 
-      <main className="flex flex-1 flex-col">
+      <main className="flex flex-1 flex-col overflow-y-auto">
         <Routes>
           {ROUTES.map(({ path, element }, index) => (
             <Route key={index} path={path} element={element} />

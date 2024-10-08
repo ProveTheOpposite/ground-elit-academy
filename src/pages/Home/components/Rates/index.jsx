@@ -1,7 +1,13 @@
 // hook
 import { useRecoilValue } from "recoil";
+// react router dom
+import { Link } from "react-router-dom";
 // atom
 import { languageState } from "src/recoil";
+// component
+import Button from "src/components/Button";
+import DecorativeSvg from "src/components/DecorativeSvg";
+import SubscriptionCard from "./SubscriptionCard";
 // assets
 import translations from "src/language/translations";
 
@@ -9,58 +15,59 @@ const Rates = () => {
   const language = useRecoilValue(languageState);
 
   return (
-    <section id="rates" className={`border-t border-zinc-400 p-5 pb-16`}>
-      <h2 className="mb-5 text-center text-2xl font-bold lg:text-3xl">
-        {translations[language].home.rates.title}
+    <section
+      id="rates"
+      className="relative flex min-h-screen flex-col justify-center bg-[#fbfcfd] px-5 py-12"
+    >
+      <h2 className="z-20 mb-5 text-center text-3xl font-bold uppercase lg:text-4xl">
+        {language === "fr" ? (
+          <>
+            Nos <span className="text-[#b0181c]">tarifs</span>
+          </>
+        ) : (
+          <>
+            Our <span className="text-[#b0181c]">prices</span>
+          </>
+        )}
       </h2>
 
-      <div className="flex items-center justify-center">
-        <div className="grid w-[450px] grid-cols-1 grid-rows-3 rounded-xl bg-white px-5 py-6 shadow-md">
-          <h3 className="col-span-full mb-7 text-center text-lg">
-            <span className="underline">
-              {translations[language].home.rates.subTitle}
-            </span>
-            <span className="text-lg text-red-600">*</span>
-          </h3>
-
-          <div className="flex items-center justify-between text-sm md:text-base">
-            <span>{translations[language].home.rates.kids}</span>
-
-            <h3 className="text-right text-2xl font-bold">25,00€</h3>
-          </div>
-
-          <div className="flex items-center justify-between text-sm md:text-base">
-            <span>{translations[language].home.rates.adults}</span>
-
-            <h3 className="text-right text-2xl font-bold">40,00€</h3>
-          </div>
-
-          <div className="flex items-end">
-            <div className="mr-2 flex h-[25px] w-[40px] items-end border-b border-l border-black"></div>
-            <div className="translate-y-2.5 text-sm md:text-base">
-              {language === "fr" ? (
-                <>
-                  <span className="font-bold">+50€</span> de frais
-                  d&apos;adhésion.
-                </>
-              ) : (
-                <>
-                  <span className="font-bold">+50€</span> membership fee.
-                </>
-              )}
-            </div>
-          </div>
-
-          <p className="mt-8 text-justify text-sm leading-normal md:text-base">
-            {translations[language].home.rates.firstContent}
-          </p>
-
-          <p className="mt-5 text-justify text-sm leading-normal md:text-base">
-            <span className="mr-1 text-red-600">*</span>
-            {translations[language].home.rates.secondContent}
+      <div className="z-20">
+        <div className="mb-8 sm:flex sm:justify-center">
+          <p className="text-center text-lg text-gray-600 sm:w-[90%] md:w-[575px]">
+            {translations[language].home.rates.content}
           </p>
         </div>
+
+        <div className="flex flex-col items-center">
+          <h3 className="mb-10 text-center text-2xl font-medium underline lg:mb-16">
+            {translations[language].home.rates.subTitle}
+          </h3>
+
+          <div className="lg:flex lg:items-center lg:gap-x-16">
+            <SubscriptionCard
+              title={translations[language].home.rates.card.kids.title}
+              description={translations[language].home.rates.card.kids.who}
+              price="25,00"
+            />
+
+            <SubscriptionCard
+              title={translations[language].home.rates.card.adults.title}
+              description={translations[language].home.rates.card.adults.who}
+              price="40,00"
+            />
+          </div>
+        </div>
+
+        <div className="mt-10 text-center lg:mt-12">
+          <Link className="rounded-full" to="/contact-us">
+            <Button className="bg-[#b0181c] text-white hover:bg-[#7d2a2d]">
+              {translations[language].header.btnContactUs}
+            </Button>
+          </Link>
+        </div>
       </div>
+
+      <DecorativeSvg fillColor="#fbfcfd" />
     </section>
   );
 };

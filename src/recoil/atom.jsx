@@ -8,3 +8,9 @@ export const languageState = atom({
   key: "languageState",
   default: savedLanguage || "fr", // Utilise la langue sauvegardée ou 'fr' par défaut
 });
+
+// atom stockant les cours du planning
+export const eventsScheduleState = atom({
+  key: "eventsScheduleState",
+  default: [],
+});
