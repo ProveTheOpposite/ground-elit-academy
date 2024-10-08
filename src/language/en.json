@@ -5,7 +5,8 @@
       "aboutUs": "About us",
       "team": "Team",
       "schedule": "Schedule",
-      "rates": "Price"
+      "rates": "Prices",
+      "faq": "FAQs"
     },
     "btnTranslation": {
       "fr": "French",
@@ -15,19 +16,24 @@
   },
 
   "home": {
-    "btnSubmit": "Contact Us",
+    "btnContactUs": "Contact Us",
 
     "banner": {
       "btnRegistration": "Join us"
     },
 
     "aboutUs": {
-      "title": "About us"
+      "title": "About us",
+      "buttonVideo": {
+        "play": "Play",
+        "pause": "Pause"
+      },
+      "videoNotSupported": "Your browser does not support HTML video."
     },
 
     "team": {
       "title": "Our team",
-      "subTitle": "In our club, we have two exceptional coaches who will help you progress to a level you never imagined possible.",
+      "subTitle": "Our coaches combine expertise and passion to guide you towards excellence, regardless of your level. Together, we will help you surpass your limits and reveal the best version of yourself.",
       "nazim": {
         "text": "Nazim Djamalov, a multiple-time French champion and former member of the national team, is a coach whose experience and talent are recognized beyond borders. With his creativity and teaching skills, he will guide you step by step to perfect your technique and develop your potential. Whether you are a beginner or a competitor, Nazim will tailor his instruction to your needs, helping you progress quickly."
       },
@@ -38,7 +44,7 @@
 
     "schedule": {
       "title": "Our Hours",
-      "subTitle": "Wrestling and grappling classes alternate each week.",
+      "subTitle": "The training sessions take place on Monday and Thursday. Wrestling and grappling classes alternate each week. Regularly check our schedule to stay informed about upcoming changes.",
       "daysOfWeek": {
         "monday": "Monday",
         "tuesday": "Tuesday",
@@ -61,12 +67,88 @@
     },
 
     "rates": {
-      "title": "Price",
       "subTitle": "Monthly subscription",
-      "adults": "Adults (14 years and older)",
-      "kids": "Children (7 years and older)",
-      "firstContent": "Payments are made in cash directly at the club along with the registration forms. Moreover, the subscription covers both disciplines. And the amount must be paid between the 1st and the 9th day of the current month.",
-      "secondContent": "A free trial class is available for both disciplines."
+      "content": "Payments are made in cash directly at the club along with the registration forms. Moreover, the subscription covers both disciplines (wrestling and grappling). And the amount must be paid between the 1st and the 9th day of the current month.",
+      "secondContent": "A free trial class is available for both disciplines.",
+      "card": {
+        "kids": {
+          "title": "Kid",
+          "who": "The children's subscription is for kids aged 5 to 13."
+        },
+        "adults": {
+          "title": "Adult",
+          "who": "The adult subscription is for individuals aged 14 and above."
+        },
+        "perMonth": "€/month"
+      }
+    },
+
+    "faq": {
+      "btnTheme": {
+        "general": "General",
+        "new": "New",
+        "courses": "Courses"
+      },
+      "questions": {
+        "general": {
+          "questionOne": {
+            "title": "What disciplines are taught at your club?",
+            "answer": "We teach freestyle wrestling and grappling."
+          },
+          "questionTwo": {
+            "title": "What are the club's opening hours?"
+          },
+          "questionThree": {
+            "title": "What are the membership and subscription fees?"
+          },
+          "questionFour": {
+            "title": "Do you offer a free trial session?",
+            "answer": "Of course, a free trial class is available for each discipline."
+          }
+        },
+
+        "new": {
+          "questionOne": {
+            "title": "Do I need prior experience to join the club?",
+            "answer": "No, if you are new to combat sports or even to sports in general, you are still welcome with us. It’s never too late to learn a combat sport like wrestling and grappling."
+          },
+          "questionTwo": {
+            "title": "What equipment is needed to get started?",
+            "answer": "Wrestling shoes are recommended, but apart from that, nothing else is necessary except your determination 😉."
+          },
+          "questionThree": {
+            "title": "Do you offer classes for beginners?",
+            "answer": "No, but we adapt based on the skill level of the people who join the club."
+          },
+          "questionFour": {
+            "title": "What are the benefits of joining a wrestling and grappling club?",
+            "answer": "The practice of wrestling and grappling is beneficial for everyone, regardless of age or gender, due to the numerous physical, mental, and social benefits they provide. These sports promote full physical development by improving strength, endurance, flexibility, and coordination. Whether you are a child or an adult, wrestling and grappling strengthen the entire body while offering excellent cardiovascular conditioning."
+          }
+        },
+
+        "courses": {
+          "questionOne": {
+            "title": "How are the classes structured?",
+            "answer": "The classes are structured as follows: warm-up, technique, and sparring. Each of these sections may vary in duration, with some lasting longer than others."
+          },
+          "questionTwo": {
+            "title": "How long does a training session last?",
+            "answer": "A training session lasts one hour for children and two hours for adults."
+          },
+          "questionThree": {
+            "title": "Are the classes mixed or separated by gender?",
+            "answer": "The classes are mixed."
+          },
+          "questionFour": {
+            "title": "Do you offer private lessons or small group training?",
+            "answer": "For the time being, we do not offer private lessons, only single group training sessions."
+          }
+        }
+      }
+    },
+
+    "requestForInformations": {
+      "content": "For any information request or other inquiries, contact us now!"
     }
   },
 

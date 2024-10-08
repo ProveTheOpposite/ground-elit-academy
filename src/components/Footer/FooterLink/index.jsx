@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const FooterLink = ({ to, children }) => (
-  <Link to={to} className="text-sm hover:underline md:text-base">
+  <Link to={to} className="hover:underline">
     {children}
   </Link>
 );

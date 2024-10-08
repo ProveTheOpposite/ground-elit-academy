@@ -19,14 +19,14 @@ const FormField = ({
 
       <input
         {...register(id)}
-        className="rounded-2xl border border-slate-500 bg-transparent py-2 pl-9 placeholder:pl-1 focus:border-transparent focus:outline-2 focus:outline-[#b0181c] md:pl-11"
+        className={`rounded-2xl border border-slate-500 bg-transparent py-2 focus:border-[#b0181c] focus:ring-[#b0181c] ${icon ? "pl-9 placeholder:pl-1 md:pl-11" : "px-3"}`}
         type={type}
         id={id}
         placeholder={placeholder}
       />
 
       <i
-        className={`fa-solid fa-${icon} absolute bottom-3 left-3.5 focus:text-[#b0181c] md:bottom-3.5 md:left-4`}
+        className={`fa-solid fa-${icon} absolute bottom-3 left-3.5 md:bottom-3.5 md:left-4`}
       ></i>
 
       {errors && (
@@ -46,8 +46,8 @@ FormField.propTypes = {
   label: PropTypes.string.isRequired,
   register: PropTypes.func.isRequired,
   type: PropTypes.string.isRequired,
-  placeholder: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
+  icon: PropTypes.string,
   errors: PropTypes.object,
 };
 

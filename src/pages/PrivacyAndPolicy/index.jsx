@@ -236,7 +236,7 @@ const PrivacyAndPolicy = () => {
       </h1>
 
       <main className="rounded-xl bg-white px-6 py-4 shadow-md lg:w-[800px] xl:w-[950px]">
-        <p className="mb-4 text-justify text-sm md:text-base">
+        <p className="mb-4 text-justify lg:text-lg">
           {language === "fr" ? (
             <>
               Dernière mise à jour : <strong>{lastUpdatedDate}</strong>
@@ -248,7 +248,7 @@ const PrivacyAndPolicy = () => {
           )}
         </p>
 
-        <p className="mb-4 text-justify text-sm md:text-base">
+        <p className="mb-4 text-justify lg:text-lg">
           {language === "fr" ? (
             <>
               Chez{" "}
@@ -279,9 +279,7 @@ const PrivacyAndPolicy = () => {
               {section.title}
             </h2>
 
-            <div className="text-justify text-sm md:text-base">
-              {section.content}
-            </div>
+            <div className="text-justify lg:text-lg">{section.content}</div>
           </div>
         ))}
       </main>

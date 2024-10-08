@@ -9,7 +9,7 @@ import { languageState, scrollToElementSelector } from "src/recoil";
 
 // Components
 import Button from "../Button";
-import HeaderMobile from "./HeaderMobile";
+import HeaderMobile from "./components/HeaderMobile";
 
 // PropTypes
 import PropTypes from "prop-types";
@@ -26,6 +26,7 @@ const Header = ({ openChangeLanguageModal }) => {
   const language = useRecoilValue(languageState);
 
   const scrollToElement = useRecoilValue(scrollToElementSelector);
+
   const location = useLocation();
 
 
@@ -57,7 +58,7 @@ const Header = ({ openChangeLanguageModal }) => {
 
   return (
     <header
-      className={`${headerBackgroundClass} fixed left-0 top-0 z-40 flex w-full items-center justify-between px-5 py-1 lg:pl-12 xl:h-[78px] xl:justify-between xl:px-24 2xl:px-44`}
+      className={`${headerBackgroundClass} fixed left-0 top-0 z-40 flex h-[68px] w-full items-center justify-between px-5 lg:pl-10 xl:h-[78px] xl:justify-between xl:px-24 2xl:px-44`}
     >
       <h2>
         <Link to="/">
@@ -79,7 +80,7 @@ const Header = ({ openChangeLanguageModal }) => {
               className={`tracking-wide transition-colors hover:text-red-600 ${textColorClass}`}
             >
               <Link
-                to={isHomePage ? "" : "/"}
+                to={key === "login" ? "/admin/login" : isHomePage ? "" : "/"}
                 className="cursor-pointer"
                 onClick={() => scrollToElement(key)}
               >
@@ -90,11 +91,11 @@ const Header = ({ openChangeLanguageModal }) => {
         </ul>
       </nav>
 
-      <div className="hidden xl:flex">
+      <div className="hidden xl:flex xl:items-center xl:gap-x-9">
         <div className="flex items-center">
           <button
             onClick={openChangeLanguageModal}
-            className={`relative mr-9 rounded-full p-1 pl-2 transition-colors ${isScrolled || !isHomePage ? "hover:bg-red-100" : "hover:bg-slate-500"}`}
+            className={`relative rounded-full p-1 pl-2 transition-colors ${isScrolled || !isHomePage ? "hover:bg-red-100" : "hover:bg-slate-500"}`}
             type="button"
             aria-label={
               language === "fr"
@@ -134,7 +135,7 @@ const Header = ({ openChangeLanguageModal }) => {
         </div>
 
         <Link className="rounded-full" to="/contact-us">
-          <Button className="bg-[#b0181c] text-white">
+          <Button className="bg-[#b0181c] text-white hover:bg-[#7d2a2d]">
             {translations[language].header.btnContactUs}
           </Button>
         </Link>
@@ -142,7 +143,7 @@ const Header = ({ openChangeLanguageModal }) => {
 
       <i
         onClick={toggleMenu}
-        className={`fa-solid fa-bars ${textColorClass} text-2xl xl:hidden`}
+        className={`fa-solid fa-bars ${textColorClass} cursor-pointer text-2xl xl:hidden`}
       ></i>
 
       <HeaderMobile showMenu={isMenuVisible} setShowMenu={setIsMenuVisible} />

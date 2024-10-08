@@ -18,7 +18,7 @@ import toast, { ToastBar, Toaster } from "react-hot-toast";
 
 // Components
 import Button from "src/components/Button";
-import FormField from "./FormField";
+import FormField from "../../components/FormField";
 
 // Assets
 import translations from "src/language/translations";
@@ -99,8 +99,7 @@ const ContactUs = () => {
         duration: Infinity,
       });
       reset();
-    } catch (e) {
-      console.error("Erreur lors de l'envoi du message.");
+    } catch (error) {
       toast.error("Une erreur est survenue. Veuillez réessayez ⚠️", {
         duration: Infinity,
       });
@@ -233,7 +232,7 @@ const ContactUs = () => {
 
               <textarea
                 {...register("content")}
-                className="h-32 resize rounded-2xl border border-slate-500 bg-transparent p-3 pb-6 placeholder:pl-1 focus:border-transparent focus:outline-2 focus:outline-[#b0181c] lg:h-40"
+                className="h-32 resize rounded-2xl border border-slate-500 bg-transparent p-3 pb-6 placeholder:pl-1 focus:border-[#b0181c] focus:ring-[#b0181c] lg:h-40"
                 id="content"
                 name="content"
                 placeholder={
@@ -252,7 +251,7 @@ const ContactUs = () => {
               )}
             </div>
 
-            <Button className="mt-2 bg-[#b0181c] font-bold text-white lg:!py-4">
+            <Button className="mt-2 bg-[#b0181c] font-bold text-white hover:bg-[#7d2a2d] lg:!py-4">
               {isLoading ? (
                 <i className="fa-solid fa-spinner animate-spin lg:text-2xl"></i>
               ) : (

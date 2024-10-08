@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 import { languageState } from "src/recoil";
 // component
 import Button from "../Button";
+import ContactItem from "./ContactItem";
+import FooterLink from "./FooterLink";
 // assets
 import { imageUrl } from "src/assets/images/imageList";
 import translations from "src/language/translations";
-import ContactItem from "./ContactItem";
-import FooterLink from "./FooterLink";
 
 const Footer = () => {
   const language = useRecoilValue(languageState);
@@ -18,7 +18,7 @@ const Footer = () => {
   return (
     <footer className="flex bg-gray-800 px-5 py-8 text-slate-300 sm:px-7 lg:justify-center lg:py-16">
       <div className="flex w-full flex-col sm:grid sm:grid-cols-2 sm:grid-rows-[1fr_auto] sm:gap-x-4 sm:gap-y-5 md:gap-10 lg:w-[95%] lg:grid-cols-3 lg:grid-rows-1 2xl:w-[1200px]">
-        <div className="mb-8 flex flex-col gap-y-3 sm:mb-0 sm:items-start sm:pl-2 lg:pl-0 xl:flex-wrap xl:content-center">
+        <div className="mb-8 flex flex-col gap-y-6 sm:mb-0 sm:items-start sm:pl-2 lg:pl-0 xl:flex-wrap xl:content-start">
           <Link to="/">
             <img
               className="w-[110px] md:w-[120px]"
@@ -27,11 +27,7 @@ const Footer = () => {
             />
           </Link>
 
-          <span className="text-sm md:text-base">
-            &copy; 2024 Ground Elite Academy - GEA Nice
-          </span>
-
-          <span className="specially text-sm md:text-base">1.5.6</span>
+          <span className="">&copy; 2024 Ground Elite Academy - GEA Nice</span>
 
           <Link className="rounded-full" to="/contact-us">
             <Button className="bg-[#b0181c] text-white">
@@ -41,8 +37,8 @@ const Footer = () => {
         </div>
 
         {/* About Us */}
-        <div className="mb-8 flex flex-col gap-y-4 sm:mb-0 sm:flex-wrap sm:content-center sm:justify-end lg:justify-center">
-          <h3 className="mb-1 text-lg font-bold uppercase">
+        <div className="mb-10 flex flex-col gap-y-5 sm:mb-0 sm:flex-wrap sm:content-center sm:justify-end lg:justify-center">
+          <h3 className="mb-1 text-xl font-bold uppercase">
             {translations[language].footer.aboutUs}
           </h3>
 
@@ -63,9 +59,9 @@ const Footer = () => {
 
         {/* Contact */}
         <div className="flex flex-col gap-y-4 sm:col-span-2 lg:col-auto lg:justify-center">
-          <h3 className="mb-1 text-lg font-bold uppercase">Contact</h3>
+          <h3 className="mb-1 text-xl font-bold uppercase">Contact</h3>
 
-          <div className="flex flex-col gap-y-4 sm:grid sm:grid-cols-2 sm:grid-rows-2 lg:flex">
+          <div className="flex flex-col gap-y-5 sm:grid sm:grid-cols-2 sm:grid-rows-2 lg:flex">
             <ContactItem
               icon="fa-brands fa-instagram"
               link="https://www.instagram.com/geanice06/"
